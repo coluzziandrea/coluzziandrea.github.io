@@ -190,59 +190,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     
-{% comment %} 
-    <script>
-      typer(document.querySelector('#banner-text'),70)
-            .line('<h1>Welcome to my digital home!</h1>')
-            .cursor({block: false, blink: 'hard', color: 'red'});
-
-    </script>
-    <script>
-    $(function () {
-
-// init the validator
-// validator files are included in the download package
-// otherwise download from http://1000hz.github.io/bootstrap-validator
-
-$('#contact-form').validator();
-
-
-// when the form is submitted
-$('#contact-form').on('submit', function (e) {
-
-    // if the validator does not prevent form submit
-    if (!e.isDefaultPrevented()) {
-        var url = "contact.php";
-
-        // POST values in the background the the script URL
-        $.ajax({
-            type: "POST",
-            url: url,
-            data: $(this).serialize(),
-            success: function (data)
-            {
-                // data = JSON object that contact.php returns
-
-                // we recieve the type of the message: success x danger and apply it to the 
-                var messageAlert = 'alert-' + data.type;
-                var messageText = data.message;
-
-                // let's compose Bootstrap alert box HTML
-                var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                
-                // If we have messageAlert and messageText
-                if (messageAlert && messageText) {
-                    // inject the alert to .messages div in our form
-                    $('#contact-form').find('.messages').html(alertBox);
-                    // empty the form
-                    $('#contact-form')[0].reset();
-                }
-            }
-        });
-        return false;
-    }
-})
-});</script> {% endcomment %}
     <script src="src/index.js" type="text/JavaScript"></script>
   </body>
 </html>
