@@ -1,5 +1,5 @@
 .banner-area {
-  background: url('./images/background.jpg') no-repeat center center fixed;
+  background: url('../images/background.jpg') no-repeat center center fixed;
   background-size: cover;
 
   text-align: center;
@@ -22,7 +22,7 @@
 .headings {
   margin-bottom: 40px;
   text-align: center;
-  color: rgb(42, 119, 60);
+  color: rgb(136, 96, 23);
 }
 
 .intro-text {
@@ -43,7 +43,7 @@ body {
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  background-color: green;
+  background-color: rgb(136, 96, 23);
 }
 
 /* --------------------------------------------------Portfolio styles----------------------------------------------- */
