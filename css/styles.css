@@ -22,7 +22,7 @@
 .headings {
   margin-bottom: 40px;
   text-align: center;
-  color: rgb(136, 96, 23);
+  color: rgb(42, 119, 60);
 }
 
 .intro-text {
@@ -43,7 +43,7 @@ body {
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  background-color: rgb(136, 96, 23);
+  background-color: green;
 }
 
 /* --------------------------------------------------Portfolio styles----------------------------------------------- */
