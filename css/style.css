@@ -65,10 +65,12 @@ nav h1 {
 
 .btn-resume {
   color: var(--primary-color);
+  font-weight: bold;
 }
 
 .btn-resume:hover {
   color: var(--secondary-color);
+  font-weight: bold;
 }
 
 nav a {
