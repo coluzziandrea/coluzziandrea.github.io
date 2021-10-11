@@ -63,6 +63,14 @@ nav h1 {
   color: var(--primary-color);
 }
 
+.btn-resume {
+  color: var(--primary-color);
+}
+
+.btn-resume:hover {
+  color: var(--secondary-color);
+}
+
 nav a {
   color: var(--primary-color);
   transition: var(--transition);
