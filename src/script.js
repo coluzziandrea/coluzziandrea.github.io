@@ -23,3 +23,28 @@ navLink.forEach((link) =>
     ul.classList.remove('show');
   })
 );
+
+function localize(language) {
+  let myLang = 'en-US';
+
+  if (language === 'it-IT') {
+    myLang = 'it-IT';
+  }
+
+  let lang = ':lang(' + myLang + ')';
+
+  let hide = '[lang]:not(' + lang + ')';
+  let show = '[lang]' + lang;
+
+  document.querySelectorAll(hide).forEach(function (node) {
+    node.style.display = 'none';
+  });
+
+  document.querySelectorAll(show).forEach(function (node) {
+    node.style.display = 'unset';
+  });
+}
+
+$(document).ready(function () {
+  localize(window.navigator.language);
+});

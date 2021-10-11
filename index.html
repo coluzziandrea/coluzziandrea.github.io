@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,6 +14,11 @@
       sizes="180x180"
       href="images/icons/apple-touch-icon.png"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="icon"
       type="image/png"
@@ -35,10 +40,29 @@
     <nav>
       <h1>Coluzzi Andrea</h1>
       <ul class="navigation">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="#about" class="nav-link"
+            ><span lang="en-US">About</span><span lang="it-IT">Su di Me</span></a
+          >
+        </li>
+        <li>
+          <a href="#skills" class="nav-link"
+            ><span lang="en-US">Skills</span
+            ><span lang="it-IT">Competenze</span></a
+          >
+        </li>
+        <li>
+          <a href="#projects" class="nav-link"
+            ><span lang="en-US">Projects</span
+            ><span lang="it-IT">Progetti</span></a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="nav-link"
+            ><span lang="en-US">Contacts</span
+            ><span lang="it-IT">Contatti</span></a
+          >
+        </li>
         <li>
           <a
             target="_blank"
@@ -62,40 +86,92 @@
         class="hero-img"
       />
       <div class="bio animate__animated animate__shakeX">
-        <h2 class="bio-title">About Me</h2>
+        <h2 class="bio-title">
+          <span lang="en-US">About Me</span><span lang="it-IT">Su di Me</span>
+        </h2>
         <p class="bio-text">
-          I am a Software Engineer who is passionate about techonology and
-          problem solving. I am experienced in many software languages, methods
-          and techniques.
+          <span lang="en-US">
+            I am a Software Engineer who is passionate about techonology and
+            problem solving. I am experienced in many software languages,
+            methods and techniques.</span
+          ><span lang="it-IT"
+            >Sono un Ingegnere Software appassionato di tecnologia e problem
+            solving. Ho esperienza in molti linguaggi, metodi e tecniche
+            software.</span
+          >
         </p>
       </div>
     </section>
     <!-- More about -->
     <section class="more-about">
-      <h2>More About Me</h2>
+      <h2>
+        <span lang="en-US"> More About Me</span
+        ><span lang="it-IT">Vuoi Saperne di più?</span>
+      </h2>
       <p>
-        👩‍💻 I'm a Software Engineer skilled in Back-End Web Applications, but I
-        am improving my Front-End Development, too.
+        👩‍💻
+
+        <span lang="en-US"
+          >I'm a Software Engineer skilled in Back-End Web Applications, but I
+          am improving my Front-End Development, too.</span
+        ><span lang="it-IT"
+          >Sono un Ingegnere Software esperto in applicazioni Web back-end, ma
+          sto anche migliorando il mio sviluppo front-end.</span
+        >
       </p>
-      <p>🔥 I Try to always Keep Up With the Latest Technology Trends.</p>
       <p>
-        🔍 I always try to find the best solution for my tasks and the best way
-        to implement it. I care deeply about building modules that suit the
-        requirements and are re-usable in the future.
+        🔥
+        <span lang="en-US"
+          >I Try to always Keep Up With the Latest Technology Trends.</span
+        ><span lang="it-IT">
+          Cerco di stare sempre al passo con le ultime tendenze
+          tecnologiche.</span
+        >
       </p>
       <p>
-        🌈 I Love the Open Source Community and I'm contributing to some
-        projects.
+        🔍
+
+        <span lang="en-US"
+          >I always try to find the best solution for my tasks and the best way
+          to implement it. I care deeply about building modules that suit the
+          requirements and are re-usable in the future.</span
+        ><span lang="it-IT">
+          Cerco sempre di trovare la soluzione migliore per i miei compiti e il
+          modo migliore per implementarla. Mi interessa molto costruire moduli
+          che soddisfino i requisiti e siano riutilizzabili in futuro.</span
+        >
       </p>
       <p>
-        🤝 I like to share work experiences with my colleagues and do team work.
+        🌈
+
+        <span lang="en-US">
+          I Love the Open Source Community and I'm contributing to some
+          projects.</span
+        ><span lang="it-IT">
+          Amo la comunità Open Source e sto contribuendo ad alcuni
+          progetti.</span
+        >
+      </p>
+      <p>
+        🤝
+
+        <span lang="en-US">
+          I like to share work experiences with my colleagues and do team
+          work.</span
+        ><span lang="it-IT">
+          Mi piace condividere esperienze lavorative con i miei colleghi e fare
+          lavoro di squadra.</span
+        >
       </p>
     </section>
 
     <!-- Skills section -->
 
     <section class="skills" id="skills">
-      <h2 class="skill-header">My Top Skills</h2>
+      <h2 class="skill-header">
+        <span lang="en-US">My Top Skills</span
+        ><span lang="it-IT">Le Mie Competenze</span>
+      </h2>
 
       <div class="skills-wrapper">
         <div class="third-set animate__animated animate__pulse">
@@ -180,16 +256,21 @@
           />
         </div>
         <div class="col-lg-12 sub-section">
-          To know more about me,<br />
-          <a href="./resources/resume.pdf" target="_blank" class="btn-resume"
-            >View Resume</a
-          >
+          <span lang="en-US">To know more about me</span
+          ><span lang="it-IT">Per conoscermi meglio</span>,<br />
+          <a href="./resources/resume.pdf" target="_blank" class="btn-resume">
+            <span lang="en-US">View Resume</span
+            ><span lang="it-IT">Visualizza CV</span>
+          </a>
         </div>
       </div>
     </section>
     <!-- Projects section -->
     <section class="projects" id="projects">
-      <h2 class="projects-title">Some of my Recent Projects</h2>
+      <h2 class="projects-title">
+        <span lang="en-US">Some of my Recent Projects</span
+        ><span lang="it-IT">Alcuni dei miei progetti recenti</span>
+      </h2>
       <div class="projects-container">
         <div class="project-container project-card">
           <img
@@ -200,19 +281,32 @@
           />
           <h3 class="project-title">Dietisy</h3>
           <p class="project-details">
-            Android Application built for people who want to track their diet
-            progresses.
+            <span lang="en-US"
+              >Android Application built for people who want to track their diet
+              progresses.</span
+            ><span lang="it-IT"
+              >Applicazione Android creata per le persone che desiderano
+              monitorare i progressi della propria dieta.</span
+            >
           </p>
           <p>
-            Dietisy is an application that allows you to constantly monitor your
-            diet progress by monitoring your weight, body measurements and
-            height.
+            <span lang="en-US"
+              >Dietisy is an application that allows you to constantly monitor
+              your diet progress by monitoring your weight, body measurements
+              and height.</span
+            ><span lang="it-IT"
+              >Dietisy è un'applicazione che ti permette di monitorare
+              costantemente i tuoi progressi nella dieta monitorando il tuo
+              peso, le misure corporee e l'altezza.</span
+            >
           </p>
           <a
             href="https://play.google.com/store/apps/details?id=com.andreacoluzzi.dietisy"
             target="_blank"
             class="btn-resume"
-            >Check it Out</a
+          >
+            <span lang="en-US">Check it Out</span
+            ><span lang="it-IT">Visualizza</span></a
           >
         </div>
         <div class="project-container project-card">
@@ -224,24 +318,40 @@
           />
           <h3 class="project-title">Band Together</h3>
           <p class="project-details">
-            Web Application implemented using the framework Ruby On Rails.
+            <span lang="en-US">
+              Web Application implemented using the framework Ruby On
+              Rails.</span
+            ><span lang="it-IT"
+              >Applicazione Web implementata utilizzando il framework Ruby On
+              Rails.</span
+            >
           </p>
           <p>
-            Social Media that helps Musicians to find other people to build a
-            Band and to manage events
+            <span lang="en-US">
+              Social Media that helps Musicians to find other people to build a
+              Band and to manage events</span
+            ><span lang="it-IT"
+              >Social Media che aiuta i Musicisti a trovare altre persone per
+              formare una Band e gestire eventi</span
+            >
           </p>
           <a
             href="https://github.com/coluzziandrea/Band_Together"
             target="_blank"
             class="btn-resume"
-            >Check it Out</a
+          >
+            <span lang="en-US">Check it Out</span
+            ><span lang="it-IT">Visualizza</span></a
           >
         </div>
       </div>
     </section>
     <!-- Contact section -->
     <section class="contact" id="contact">
-      <h2>Get In Touch With Me</h2>
+      <h2>
+        <span lang="en-US">Get In Touch With Me</span
+        ><span lang="it-IT">Mettiti in Contatto con Me</span>
+      </h2>
       <div class="contact-form-container">
         <div class="contact-form">
           <form action="https://formspree.io/f/xjvjzjyv" method="POST">
@@ -257,7 +367,10 @@
               />
             </div>
             <div class="form-control">
-              <label for="message">Message</label>
+              <label for="message">
+                <span lang="en-US">Message</span
+                ><span lang="it-IT">Messaggio</span></label
+              >
               <textarea
                 id="message"
                 cols="60"
@@ -270,10 +383,9 @@
             </div>
             <input
               type="submit"
-              value="Submit"
               id="submit-btn"
               class="submit-btn"
-            />
+            > </input>
           </form>
         </div>
       </div>
