@@ -12,27 +12,40 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="assets/icons/apple-touch-icon.png"
+      href="images/icons/apple-touch-icon.png"
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/icons/icon_inverted.png"
+    />
 
     <!-- Animate CSS CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <title>Andrea Coluzzi | Software Developer</title>
+    <title>Coluzzi Andrea | Software Engineer</title>
   </head>
 
   <body>
     <!-- Navbar -->
     <nav>
-      <h1>ANDREA COLUZZI</h1>
+      <h1>Coluzzi Andrea</h1>
       <ul class="navigation">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a
+            target="_blank"
+            href="https://coluzziandreadev.wordpress.com/"
+            class="nav-link"
+            >Blog</a
+          >
+        </li>
       </ul>
       <button class="burger-menu" id="burger-menu">
         <ion-icon class="bars" name="menu-outline"></ion-icon>
@@ -43,7 +56,7 @@
 
     <section class="hero" id="about">
       <img
-        src="images/back.png"
+        src="images/software.svg"
         alt="andrea-coluzzi"
         loading="lazy"
         class="hero-img"
@@ -85,46 +98,95 @@
       <h2 class="skill-header">My Top Skills</h2>
 
       <div class="skills-wrapper">
+        <div class="third-set animate__animated animate__pulse">
+          <img
+            src="images/icons/java.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="images/icons/icons8-python.svg"
+            alt="angular"
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="images/icons/spring.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+        </div>
         <div class="first-set animate__animated animate__pulse">
           <img
-            src="assets/icons/icons8-html-5.svg"
+            src="images/icons/icons8-html-5.svg"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
           <img
-            src="assets/icons/icons8-css3.svg"
+            src="images/icons/icons8-css3.svg"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
           <img
-            src="assets/icons/icons8-javascript.svg"
+            src="images/icons/icons8-javascript.svg"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
         </div>
 
+        <div class="fourth-set animate__animated animate__pulse">
+          <img
+            src="images/icons/icons8-typescript.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="images/icons/ruby.svg"
+            alt="angular"
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="images/icons/docker.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+        </div>
         <div class="second-set animate__animated animate__pulse">
           <img
-            src="assets/icons/icons8-bootstrap.svg"
+            src="images/icons/android.svg"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
           <img
-            src="assets/icons/icons8-react-native.svg"
-            alt=""
+            src="images/icons/angular.svg"
+            alt="angular"
             loading="lazy"
             class="icon icon-card"
           />
           <img
-            src="assets/icons/icons8-git.svg"
+            src="images/icons/icons8-git.svg"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
+        </div>
+        <div class="col-lg-12 sub-section">
+          To know more about me,<br />
+          <a
+            href="./resources/resume.pdf"
+            target="_blank"
+            class="btn btn-warning"
+            >View Resume</a
+          >
         </div>
       </div>
     </section>
@@ -134,48 +196,49 @@
       <div class="projects-container">
         <div class="project-container project-card">
           <img
-            src="assets/images/expenseTracker.png"
-            alt="expense-tracker"
+            src="images/projects/dietisy.png"
+            alt="Dietisy"
             loading="lazy"
             class="project-pic"
           />
-          <h3 class="project-title">Expense Tracker</h3>
+          <h3 class="project-title">Dietisy</h3>
           <p class="project-details">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-            ratione vel inventore labore commodi modi quos culpa aut saepe!
-            Alias!
+            Android Application built for people who want to track their diet
+            progresses.
           </p>
-          <a href="#" target="_blank" class="project-link">Check it Out</a>
+          <p>
+            Dietisy is an application that allows you to constantly monitor your
+            diet progress by monitoring your weight, body measurements and
+            height.
+          </p>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.andreacoluzzi.dietisy"
+            target="_blank"
+            class="project-link"
+            >Check it Out</a
+          >
         </div>
         <div class="project-container project-card">
           <img
-            src="assets/images/netflixClone.png"
-            alt="netflic-clone"
+            src="images/projects/bandTogether.png"
+            alt="Band Together"
             loading="lazy"
             class="project-pic"
           />
-          <h3 class="project-title">Netflix Clone</h3>
+          <h3 class="project-title">Band Together</h3>
           <p class="project-details">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-            ratione vel inventore labore commodi modi quos culpa aut saepe!
-            Alias!
+            Web Application implemented using the framework Ruby On Rails.
           </p>
-          <a href="#" target="_blank" class="project-link">Check it Out</a>
-        </div>
-        <div class="project-container project-card">
-          <img
-            src="assets/images/greenyEarth.png"
-            alt="greeny-earth"
-            loading="lazy"
-            class="project-pic"
-          />
-          <h3 class="project-title">Greeny Earth</h3>
-          <p class="project-details">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-            ratione vel inventore labore commodi modi quos culpa aut saepe!
-            Alias!
+          <p>
+            Social Media that helps Musicians to find other people to build a
+            Band and to manage events
           </p>
-          <a href="#" target="_blank" class="project-link">Check it Out</a>
+          <a
+            href="https://github.com/coluzziandrea/Band_Together"
+            target="_blank"
+            class="project-link"
+            >Check it Out</a
+          >
         </div>
       </div>
     </section>
@@ -222,32 +285,35 @@
     <div class="socials">
       <a href="https://twitter.com/acidevil94" target="_blank"
         ><img
-          src="assets/icons/icons8-twitter-circled.gif"
+          src="images/icons/icons8-twitter-circled.gif"
           alt="Twitter"
           loading="lazy"
           class="socicon"
       /></a>
       <a href="https://www.linkedin.com/in/andrea-coluzzi/" target="_blank"
         ><img
-          src="assets/icons/icons8-linkedin-circled.gif"
+          src="images/icons/icons8-linkedin-circled.gif"
           alt="Linkedin"
           loading="lazy"
           class="socicon"
       /></a>
       <a href="https://github.com/coluzziandrea" target="_blank"
-        ><img src="assets/icons/icons8-github.gif" alt="Github" class="socicon"
+        ><img src="images/icons/icons8-github.gif" alt="Github" class="socicon"
+      /></a>
+      <a href="https://coluzziandreadev.wordpress.com/" target="_blank"
+        ><img
+          src="images/icons/icons8-wordpress.gif"
+          alt="Wordpress"
+          class="socicon"
       /></a>
     </div>
     <!-- Scroll to top -->
     <i class="scroll-up" id="scroll-up"
-      ><img
-        src="assets/icons/icons8-upward-arrow.gif"
-        class="socicon up-arrow"
-        alt="scroll-up"
+      ><img src="images/icons/up.png" class="socicon up-arrow" alt="scroll-up"
     /></i>
     <!-- Footer section -->
     <footer>
-      <p class="copy">&copy; Copyright 2021</p>
+      <p class="copy">&copy; Copyright 2021 <i>Coluzzi Andrea</i></p>
     </footer>
     <!-- Website scripts -->
     <script src="src/script.js"></script>
