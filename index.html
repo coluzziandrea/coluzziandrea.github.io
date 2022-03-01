@@ -1,90 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--CSS Styles -->
-    <link rel="stylesheet" href="css/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/icons/apple-touch-icon.png"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/icons/favicon.ico"
-    />
+  <!--CSS Styles -->
+  <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Animate CSS CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <title>Coluzzi Andrea | Software Engineer</title>
-  </head>
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon.ico" />
 
-  <body>
-    <!-- Navbar -->
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <nav>
-      <h1>Coluzzi Andrea</h1>
-      <ul class="navigation">
-        <li>
-          <a href="#about" class="nav-link"
-            ><span lang="en-US">About</span><span lang="it-IT">Su di Me</span></a
-          >
-        </li>
-        <li>
-          <a href="#skills" class="nav-link"
-            ><span lang="en-US">Skills</span
-            ><span lang="it-IT">Competenze</span></a
-          >
-        </li>
-        <li>
-          <a href="#projects" class="nav-link"
-            ><span lang="en-US">Projects</span
-            ><span lang="it-IT">Progetti</span></a
-          >
-        </li>
-        <li>
-          <a href="#contact" class="nav-link"
-            ><span lang="en-US">Contacts</span
-            ><span lang="it-IT">Contatti</span></a
-          >
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://hashnode.com/@coluzziandrea"
-            class="nav-link"
-            >Blog</a
-          >
-        </li>
-      </ul>
-      <button class="burger-menu" id="burger-menu">
-        <ion-icon class="bars" name="menu-outline"></ion-icon>
-      </button>
-    </nav>
-    <!-- Hero Section -->
+  <!-- Website scripts -->
+  <script defer src="src/script.js"></script>
+
+  <title>Coluzzi Andrea | Software Engineer</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+
+  <nav>
+    <h1>Coluzzi Andrea</h1>
+    <ul class="navigation">
+      <li>
+        <a href="#about" class="nav-link"><span lang="en-US">About</span><span lang="it-IT">Su di Me</span></a>
+      </li>
+      <li>
+        <a href="#skills" class="nav-link"><span lang="en-US">Skills</span><span lang="it-IT">Competenze</span></a>
+      </li>
+      <li>
+        <a href="#projects" class="nav-link"><span lang="en-US">Projects</span><span lang="it-IT">Progetti</span></a>
+      </li>
+      <li>
+        <a href="#contact" class="nav-link"><span lang="en-US">Contacts</span><span lang="it-IT">Contatti</span></a>
+      </li>
+      <li>
+        <a target="_blank" href="https://hashnode.com/@coluzziandrea" class="nav-link">Blog</a>
+      </li>
+    </ul>
+    <button class="burger-menu" id="burger-menu">
+      <ion-icon class="bars" name="menu-outline"></ion-icon>
+    </button>
+  </nav>
+
+
+  <main>
+
+
 
     <section class="hero" id="about">
-      <img
-        src="images/software.svg"
-        alt="andrea-coluzzi"
-        loading="lazy"
-        class="hero-img"
-      />
+      <img src="images/software.svg" alt="andrea-coluzzi" loading="lazy" class="hero-img" />
       <div class="bio animate__animated animate__shakeX">
         <h2 class="bio-title">
           <span lang="en-US">About Me</span><span lang="it-IT">Su di Me</span>
@@ -93,75 +66,59 @@
           <span lang="en-US">
             I am a Software Engineer who is passionate about techonology and
             problem solving. I am experienced in many software languages,
-            methods and techniques.</span
-          ><span lang="it-IT"
-            >Sono un Ingegnere Software appassionato di tecnologia e problem
+            methods and techniques.</span><span lang="it-IT">Sono un Ingegnere Software appassionato di tecnologia e
+            problem
             solving. Ho esperienza in molti linguaggi, metodi e tecniche
-            software.</span
-          >
+            software.</span>
         </p>
       </div>
     </section>
     <!-- More about -->
     <section class="more-about">
       <h2>
-        <span lang="en-US"> More About Me</span
-        ><span lang="it-IT">Vuoi Saperne di più?</span>
+        <span lang="en-US"> More About Me</span><span lang="it-IT">Vuoi Saperne di più?</span>
       </h2>
       <p>
         👩‍💻
 
-        <span lang="en-US"
-          >I'm a Software Engineer skilled in Back-End Web Applications, but I
-          am improving my Front-End Development too.</span
-        ><span lang="it-IT"
-          >Sono un Ingegnere Software esperto in applicazioni Web back-end, ma
-          sto anche migliorando il mio sviluppo front-end.</span
-        >
+        <span lang="en-US">I'm a Software Engineer skilled in Back-End Web Applications, but I
+          am improving my Front-End Development too.</span><span lang="it-IT">Sono un Ingegnere Software esperto in
+          applicazioni Web back-end, ma
+          sto anche migliorando il mio sviluppo front-end.</span>
       </p>
       <p>
         🔥
-        <span lang="en-US"
-          >I Always Try to Keep Up With the Latest Technology Trends.</span
-        ><span lang="it-IT">
+        <span lang="en-US">I Always Try to Keep Up With the Latest Technology Trends.</span><span lang="it-IT">
           Cerco di stare sempre al passo con le ultime tendenze
-          tecnologiche.</span
-        >
+          tecnologiche.</span>
       </p>
       <p>
         🔍
 
-        <span lang="en-US"
-          >I always try to find the best solutions for my tasks and the best way
+        <span lang="en-US">I always try to find the best solutions for my tasks and the best way
           to implement them. I deeply care about building modules that suit the
-          requirements and are re-usable in the future.</span
-        ><span lang="it-IT">
+          requirements and are re-usable in the future.</span><span lang="it-IT">
           Cerco sempre di trovare la soluzione migliore per i miei compiti e il
           modo migliore per implementarla. Mi interessa molto costruire moduli
-          che soddisfino i requisiti e siano riutilizzabili in futuro.</span
-        >
+          che soddisfino i requisiti e siano riutilizzabili in futuro.</span>
       </p>
       <p>
         🌈
 
         <span lang="en-US">
           I Love the Open Source Community and I'm contributing to some
-          projects.</span
-        ><span lang="it-IT">
+          projects.</span><span lang="it-IT">
           Amo la comunità Open Source e sto contribuendo ad alcuni
-          progetti.</span
-        >
+          progetti.</span>
       </p>
       <p>
         🤝
 
         <span lang="en-US">
           I like sharing work experiences with my colleagues and I love team
-          work.</span
-        ><span lang="it-IT">
+          work.</span><span lang="it-IT">
           Mi piace condividere esperienze lavorative con i miei colleghi e fare
-          lavoro di squadra.</span
-        >
+          lavoro di squadra.</span>
       </p>
     </section>
 
@@ -169,98 +126,35 @@
 
     <section class="skills" id="skills">
       <h2 class="skill-header">
-        <span lang="en-US">My Top Skills</span
-        ><span lang="it-IT">Le Mie Competenze</span>
+        <span lang="en-US">My Top Skills</span><span lang="it-IT">Le Mie Competenze</span>
       </h2>
 
       <div class="skills-wrapper">
         <div class="third-set animate__animated animate__pulse">
-          <img
-            src="images/icons/java.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="images/icons/icons8-python.svg"
-            alt="angular"
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="images/icons/spring.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
+          <img src="images/icons/java.svg" alt="" loading="lazy" class="icon icon-card" />
+          <img src="images/icons/icons8-python.svg" alt="angular" loading="lazy" class="icon icon-card" />
+          <img src="images/icons/spring.svg" alt="" loading="lazy" class="icon icon-card" />
         </div>
         <div class="first-set animate__animated animate__pulse">
-          <img
-            src="images/icons/icons8-html-5.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="images/icons/icons8-css3.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="images/icons/icons8-javascript.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
+          <img src="images/icons/icons8-html-5.svg" alt="" loading="lazy" class="icon icon-card" />
+          <img src="images/icons/icons8-css3.svg" alt="" loading="lazy" class="icon icon-card" />
+          <img src="images/icons/icons8-javascript.svg" alt="" loading="lazy" class="icon icon-card" />
         </div>
 
         <div class="fourth-set animate__animated animate__pulse">
-          <img
-            src="images/icons/icons8-typescript.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="images/icons/ruby.svg"
-            alt="angular"
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="images/icons/docker.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
+          <img src="images/icons/icons8-typescript.svg" alt="" loading="lazy" class="icon icon-card" />
+          <img src="images/icons/ruby.svg" alt="angular" loading="lazy" class="icon icon-card" />
+          <img src="images/icons/docker.svg" alt="" loading="lazy" class="icon icon-card" />
         </div>
         <div class="second-set animate__animated animate__pulse">
-          <img
-            src="images/icons/android.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="images/icons/angular.svg"
-            alt="angular"
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="images/icons/icons8-git.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
+          <img src="images/icons/android.svg" alt="" loading="lazy" class="icon icon-card" />
+          <img src="images/icons/angular.svg" alt="angular" loading="lazy" class="icon icon-card" />
+          <img src="images/icons/icons8-git.svg" alt="" loading="lazy" class="icon icon-card" />
         </div>
         <div class="col-lg-12 sub-section">
-          <span lang="en-US">To know more about me</span
-          ><span lang="it-IT">Per conoscermi meglio</span>,<br />
+          <span lang="en-US">To know more about me</span><span lang="it-IT">Per conoscermi meglio</span>,<br />
           <a href="./resources/resume.pdf" target="_blank" class="btn-resume">
-            <span lang="en-US">View Resume</span
-            ><span lang="it-IT">Visualizza CV</span>
+            <span lang="en-US">View Resume</span><span lang="it-IT">Visualizza CV</span>
           </a>
         </div>
       </div>
@@ -268,185 +162,109 @@
     <!-- Projects section -->
     <section class="projects" id="projects">
       <h2 class="projects-title">
-        <span lang="en-US">Some of my Recent Projects</span
-        ><span lang="it-IT">Alcuni dei miei progetti recenti</span>
+        <span lang="en-US">Some of my Recent Projects</span><span lang="it-IT">Alcuni dei miei progetti recenti</span>
       </h2>
       <div class="projects-container">
         <div class="project-container project-card">
-          <img
-            src="images/projects/dietisy.png"
-            alt="Dietisy"
-            loading="lazy"
-            class="project-pic"
-          />
+          <img src="images/projects/dietisy.png" alt="Dietisy" loading="lazy" class="project-pic" />
           <h3 class="project-title">Dietisy</h3>
           <p class="project-details">
-            <span lang="en-US"
-              >Android Application built for people who want to track their diet
-              progresses.</span
-            ><span lang="it-IT"
-              >Applicazione Android creata per le persone che desiderano
-              monitorare i progressi della propria dieta.</span
-            >
+            <span lang="en-US">Android Application built for people who want to track their diet
+              progresses.</span><span lang="it-IT">Applicazione Android creata per le persone che desiderano
+              monitorare i progressi della propria dieta.</span>
           </p>
           <p>
-            <span lang="en-US"
-              >Dietisy is an application that allows you to constantly monitor
+            <span lang="en-US">Dietisy is an application that allows you to constantly monitor
               your diet progress by monitoring your weight, body measurements
-              and height.</span
-            ><span lang="it-IT"
-              >Dietisy è un'applicazione che ti permette di monitorare
+              and height.</span><span lang="it-IT">Dietisy è un'applicazione che ti permette di monitorare
               costantemente i tuoi progressi nella dieta monitorando il tuo
-              peso, le misure corporee e l'altezza.</span
-            >
+              peso, le misure corporee e l'altezza.</span>
           </p>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.andreacoluzzi.dietisy"
-            target="_blank"
-            class="btn-resume"
-          >
-            <span lang="en-US">Check it Out</span
-            ><span lang="it-IT">Visualizza</span></a
-          >
+          <a href="https://play.google.com/store/apps/details?id=com.andreacoluzzi.dietisy" target="_blank"
+            class="btn-resume">
+            <span lang="en-US">Check it Out</span><span lang="it-IT">Visualizza</span></a>
         </div>
         <div class="project-container project-card">
-          <img
-            src="images/projects/bandTogether.png"
-            alt="Band Together"
-            loading="lazy"
-            class="project-pic"
-          />
+          <img src="images/projects/bandTogether.png" alt="Band Together" loading="lazy" class="project-pic" />
           <h3 class="project-title">Band Together</h3>
           <p class="project-details">
             <span lang="en-US">
               Web Application implemented using the framework Ruby On
-              Rails.</span
-            ><span lang="it-IT"
-              >Applicazione Web implementata utilizzando il framework Ruby On
-              Rails.</span
-            >
+              Rails.</span><span lang="it-IT">Applicazione Web implementata utilizzando il framework Ruby On
+              Rails.</span>
           </p>
           <p>
             <span lang="en-US">
               Social Media that helps Musicians to find other people to build a
-              Band and to manage events</span
-            ><span lang="it-IT"
-              >Social Media che aiuta i Musicisti a trovare altre persone per
-              formare una Band e gestire eventi</span
-            >
+              Band and to manage events</span><span lang="it-IT">Social Media che aiuta i Musicisti a trovare altre
+              persone per
+              formare una Band e gestire eventi</span>
           </p>
-          <a
-            href="https://github.com/coluzziandrea/Band_Together"
-            target="_blank"
-            class="btn-resume"
-          >
-            <span lang="en-US">Check it Out</span
-            ><span lang="it-IT">Visualizza</span></a
-          >
+          <a href="https://github.com/coluzziandrea/Band_Together" target="_blank" class="btn-resume">
+            <span lang="en-US">Check it Out</span><span lang="it-IT">Visualizza</span></a>
         </div>
       </div>
+    </section>
+    <section class="support">
+      <h2 class="support-title">
+        <span lang="en-US">Support My Work</span><span lang="it-IT">Supporta il Mio Lavoro</span>
+      </h2>
+      <div class="support-content">
+        <a href="https://www.buymeacoffee.com/coluzziandrea" target="_blank"><img
+            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+            style="height: 60px !important;width: 217px !important;"></a>
+      </div>
+
     </section>
     <!-- Contact section -->
     <section class="contact" id="contact">
       <h2>
-        <span lang="en-US">Get In Touch With Me</span
-        ><span lang="it-IT">Mettiti in Contatto con Me</span>
+        <span lang="en-US">Get In Touch With Me</span><span lang="it-IT">Mettiti in Contatto con Me</span>
       </h2>
       <div class="contact-form-container">
         <div class="contact-form">
           <form action="https://formspree.io/f/xjvjzjyv" method="POST">
             <div class="form-control">
               <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="_replyto"
-                placeholder="Enter Your Email"
-                class="input-field"
-                required
-              />
+              <input type="email" id="email" name="_replyto" placeholder="Enter Your Email" class="input-field"
+                required />
             </div>
             <div class="form-control">
               <label for="message">
-                <span lang="en-US">Message</span
-                ><span lang="it-IT">Messaggio</span></label
-              >
-              <textarea
-                id="message"
-                cols="60"
-                rows="10"
-                placeholder="Enter Your Message"
-                name="message"
-                class="input-field"
-                required
-              ></textarea>
+                <span lang="en-US">Message</span><span lang="it-IT">Messaggio</span></label>
+              <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message"
+                class="input-field" required></textarea>
             </div>
-            <input
-              type="submit"
-              id="submit-btn"
-              class="submit-btn"
-            > </input>
+            <input type="submit" id="submit-btn" class="submit-btn"> </input>
           </form>
         </div>
       </div>
     </section>
     <!-- Social accounts - Fixed to the right -->
     <div class="socials">
-      <a href="https://twitter.com/acidevil94" target="_blank"
-        ><img
-          src="images/icons/icons8-twitter-circled.gif"
-          alt="Twitter"
-          loading="lazy"
-          class="socicon"
-      /></a>
-      <a href="https://www.linkedin.com/in/andrea-coluzzi/" target="_blank"
-        ><img
-          src="images/icons/icons8-linkedin-circled.gif"
-          alt="Linkedin"
-          loading="lazy"
-          class="socicon"
-      /></a>
-      <a href="https://github.com/coluzziandrea" target="_blank"
-        ><img src="images/icons/icons8-github.gif" alt="Github" class="socicon"
-      /></a>
-      <a href="https://hashnode.com/@coluzziandrea" target="_blank"
-        ><img
-          src="images/icons/icons8-commenti.gif"
-          alt="Blog"
-          class="socicon"
-      /></a>
-      <a href="https://api.whatsapp.com/send/?phone=393402494287&text=Hi%20Andrea%2C%0AI%20wanted%20to%20talk%20to%20you%20about%20a%20project%20I%20had%20in%20mind%20to%20develop.%20I%20think%20you%20are%20the%20right%20person.&app_absent=0" target="_blank" lang="en-US" 
-      ><img
-        src="images/icons/icons8-whatsapp.gif"
-        alt="WhatsApp"
-        class="socicon"
-    /></a>
-    <a href="https://api.whatsapp.com/send/?phone=393402494287&text=Ciao%20Andrea%2C%0AVorrei%20parlarti%20di%20un%20progetto%20che%20avevo%20in%20mente%20di%20sviluppare.%20Penso%20che%20tu%20saresti%20la%20persona%20giusta.&app_absent=0" target="_blank" lang="it-IT" 
-    ><img
-      src="images/icons/icons8-whatsapp.gif"
-      alt="WhatsApp"
-      class="socicon"
-  /></a>
+      <a href="https://twitter.com/acidevil94" target="_blank"><img src="images/icons/icons8-twitter-circled.gif"
+          alt="Twitter" loading="lazy" class="socicon" /></a>
+      <a href="https://www.linkedin.com/in/andrea-coluzzi/" target="_blank"><img
+          src="images/icons/icons8-linkedin-circled.gif" alt="Linkedin" loading="lazy" class="socicon" /></a>
+      <a href="https://github.com/coluzziandrea" target="_blank"><img src="images/icons/icons8-github.gif" alt="Github"
+          class="socicon" /></a>
+      <a href="https://hashnode.com/@coluzziandrea" target="_blank"><img src="images/icons/icons8-commenti.gif"
+          alt="Blog" class="socicon" /></a>
+      <a href="https://api.whatsapp.com/send/?phone=393402494287&text=Hi%20Andrea%2C%0AI%20wanted%20to%20talk%20to%20you%20about%20a%20project%20I%20had%20in%20mind%20to%20develop.%20I%20think%20you%20are%20the%20right%20person.&app_absent=0"
+        target="_blank" lang="en-US"><img src="images/icons/icons8-whatsapp.gif" alt="WhatsApp" class="socicon" /></a>
+      <a href="https://api.whatsapp.com/send/?phone=393402494287&text=Ciao%20Andrea%2C%0AVorrei%20parlarti%20di%20un%20progetto%20che%20avevo%20in%20mente%20di%20sviluppare.%20Penso%20che%20tu%20saresti%20la%20persona%20giusta.&app_absent=0"
+        target="_blank" lang="it-IT"><img src="images/icons/icons8-whatsapp.gif" alt="WhatsApp" class="socicon" /></a>
     </div>
     <!-- Scroll to top -->
-    <i class="scroll-up" id="scroll-up"
-      ><img src="images/icons/icons8-up-48.png" class="socicon up-arrow" alt="scroll-up"
-    /></i>
+    <i class="scroll-up" id="scroll-up"><img src="images/icons/icons8-up-48.png" class="socicon up-arrow"
+        alt="scroll-up" /></i>
     <!-- Footer section -->
     <footer>
       <p class="copy">&copy; Copyright 2022 <i>Coluzzi Andrea</i></p>
     </footer>
-    <!-- Website scripts -->
-    <script src="src/script.js"></script>
+  </main>
 
-    <!-- Ion icons scripts -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+
+</body>
+
 </html>

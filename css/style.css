@@ -2,7 +2,7 @@
 
 /* Variables */
 :root {
-  --font-family: 'Roboto', sans-serf;
+  --font-family: 'Roboto', sans-serif;
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
@@ -63,6 +63,11 @@ nav h1 {
   color: var(--primary-color);
 }
 
+h2 {
+  text-align: center;
+  margin-bottom: var(--bottom-margin);
+}
+
 .btn-resume {
   color: var(--primary-color);
   font-weight: bold;
@@ -70,7 +75,6 @@ nav h1 {
 
 .btn-resume:hover {
   color: var(--secondary-color);
-  font-weight: bold;
 }
 
 nav a {
@@ -133,11 +137,6 @@ nav ul li {
 .more-about {
   background-color: var(--bg-color);
   padding: 1rem 6rem;
-}
-
-.more-about h2 {
-  margin-bottom: var(--bottom-margin);
-  text-align: center;
 }
 
 .more-about p {
@@ -225,17 +224,13 @@ nav ul li {
   margin-top: 2rem;
 }
 
-.contact h2 {
-  text-align: center;
-  margin-bottom: var(--bottom-margin-2);
-}
-
 .contact-form-container {
   max-width: 40.75rem;
   margin: 0 auto;
   padding: 0.938rem;
   border-radius: 5px;
   box-shadow: 0 3px 10px var(--secondary-shadow);
+  margin-top: 25px;
 }
 
 .contact-form-container label {
@@ -279,6 +274,15 @@ nav ul li {
   border: 2px solid var(--primary-color);
   cursor: pointer;
 }
+
+.support-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--bottom-margin);
+  padding-bottom: var(--bottom-margin);
+}
+
 .socials {
   display: flex;
   flex-direction: column;
@@ -353,10 +357,6 @@ footer {
   .more-about {
     margin-top: 2rem;
     padding: 1rem 3.5rem;
-  }
-
-  .more-about h2 {
-    text-align: center;
   }
 
   .more-about p {
