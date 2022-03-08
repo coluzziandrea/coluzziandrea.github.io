@@ -1,10 +1,10 @@
 import './App.css';
-import Header from './components/Header';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contacts from './components/Contacts';
-import Sidebar from './components/Sidebar';
+import Header from './components/Header/Header';
+import About from './components/About/About';
+import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects';
+import Contacts from './components/Contacts/Contacts';
+import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
   return (

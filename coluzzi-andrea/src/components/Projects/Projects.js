@@ -1,6 +1,8 @@
-import dietisy from '../assets/projects/dietisy.png';
-import bandTogether from '../assets/projects/bandTogether.png';
+import dietisy from '../../assets/projects/dietisy.png';
+import bandTogether from '../../assets/projects/bandTogether.png';
 import ProjectItem from './ProjectItem';
+
+import './Projects.css';
 
 const myProjects = [
   {

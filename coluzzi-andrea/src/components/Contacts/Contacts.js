@@ -1,3 +1,5 @@
+import './Contacts.css';
+
 function Contacts() {
   return (
     <>
@@ -5,7 +7,7 @@ function Contacts() {
         <h2 class='support-title'>Support Me</h2>
         <div class='support-content'>
           <a
-            class='button-primary'
+            class='primary-button'
             href='https://www.buymeacoffee.com/coluzziandrea'
             target='_blank'
           >
@@ -45,7 +47,7 @@ function Contacts() {
                 type='submit'
                 id='submit-btn'
                 value='Submit'
-                class='submit-btn'
+                class='primary-button submit-btn'
               />
             </form>
           </div>
@@ -56,8 +58,3 @@ function Contacts() {
 }
 
 export default Contacts;
-/*
- 
-       
-     
-*/

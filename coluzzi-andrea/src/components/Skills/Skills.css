@@ -1,0 +1,35 @@
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.skill {
+  width: 11.875rem;
+  height: 11.25rem;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.know-more {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 720px) {
+  .skill {
+    width: 5.875rem;
+    height: 5.25rem;
+  }
+}

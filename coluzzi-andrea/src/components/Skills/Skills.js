@@ -1,22 +1,24 @@
-import android from '../assets/skills/android.svg';
-import angular from '../assets/skills/angular.svg';
-import docker from '../assets/skills/docker.svg';
-import css from '../assets/skills/css.svg';
-import git from '../assets/skills/git.svg';
-import html from '../assets/skills/html.svg';
-import javascript from '../assets/skills/javascript.svg';
-import python from '../assets/skills/python.svg';
-import kotlin from '../assets/skills/kotlin.svg';
-import typescript from '../assets/skills/typescript.svg';
-import react from '../assets/skills/react.svg';
-import rxjs from '../assets/skills/rxjs.svg';
-import nodejs from '../assets/skills/nodejs.svg';
-import firebase from '../assets/skills/firebase.svg';
+import android from '../../assets/skills/android.svg';
+import angular from '../../assets/skills/angular.svg';
+import docker from '../../assets/skills/docker.svg';
+import css from '../../assets/skills/css.svg';
+import git from '../../assets/skills/git.svg';
+import html from '../../assets/skills/html.svg';
+import javascript from '../../assets/skills/javascript.svg';
+import python from '../../assets/skills/python.svg';
+import kotlin from '../../assets/skills/kotlin.svg';
+import typescript from '../../assets/skills/typescript.svg';
+import react from '../../assets/skills/react.svg';
+import rxjs from '../../assets/skills/rxjs.svg';
+import nodejs from '../../assets/skills/nodejs.svg';
+import firebase from '../../assets/skills/firebase.svg';
 
-import resume from '../assets/docs/resume.pdf';
+import resume from '../../assets/docs/resume.pdf';
+
+import './Skills.css';
 
 const renderItem = (src, title) => {
-  return <img src={src} alt={title} loading='lazy' class='icon icon-card' />;
+  return <img src={src} alt={title} loading='lazy' class='skill' />;
 };
 
 const mySkills = [
@@ -91,9 +93,8 @@ function Skills() {
         })}
 
         <div class='sub-section'>
-          To know more about me,
-          <br />
-          <a href={resume} target='_blank' class='button-primary'>
+          <p class='know-more'>To know more about me:</p>
+          <a href={resume} target='_blank' class='primary-button'>
             View Resume
           </a>
         </div>
