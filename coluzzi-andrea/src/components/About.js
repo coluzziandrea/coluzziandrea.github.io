@@ -1,4 +1,4 @@
-import software from './software.svg';
+import software from '../assets/software.svg';
 
 function About() {
   return (
