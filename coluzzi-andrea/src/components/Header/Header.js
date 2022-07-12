@@ -28,7 +28,7 @@ function Header() {
         <li>
           <a
             target='_blank'
-            href='https://hashnode.com/@coluzziandrea'
+            href='https://coluzziandrea.hashnode.dev/'
             class='nav-link'
           >
             Blog
