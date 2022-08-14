@@ -32,6 +32,7 @@
 ## Tech Stack
 
 - React
+- Styled Components
 - HTML5 & CSS3
 
 
