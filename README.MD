@@ -17,7 +17,7 @@
 
 
 [![GitHub issues](https://img.shields.io/github/issues/coluzziandrea/coluzziandrea.github.io?color=31afb7&style=for-the-badge)](https://github.com/coluzziandrea/coluzziandrea.github.io/issues)
-[![GitHub license](https://img.shields.io/github/license/coluzziandrea/coluzziandrea.github.io?color=31afb7&style=for-the-badge)](https://github.com/coluzziandrea/coluzziandrea.github.io/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/coluzziandrea/coluzziandrea.github.io?color=31afb7&style=for-the-badge)](https://github.com/coluzziandrea/coluzziandrea.github.io/blob/master/LICENSE.MD)
 [![Twitter Follow](https://img.shields.io/twitter/follow/acidevil94?color=31afb7&logo=twitter&logoColor=ffffff&style=for-the-badge)](https://twitter.com/acidevil94)
 [![Node Version](https://img.shields.io/static/v1?label=Node&message=v16.16.0&color=31afb7&style=for-the-badge)](https://nodejs.org)
 
