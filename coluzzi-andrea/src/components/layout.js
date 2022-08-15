@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/GlobalStyle";
 import theme from "../styles/Theme";
-import Loader from "./loader";
+import Loader from "./SplashLoader";
 
 const StyledContent = styled.div`
   display: flex;
@@ -19,15 +19,13 @@ const Layout = ({ children }) => {
       return;
     }
 
-    if (true) {
-      setTimeout(() => {
-        const el = document.getElementById("root");
-        if (el) {
-          el.scrollIntoView();
-          el.focus();
-        }
-      }, 0);
-    }
+    setTimeout(() => {
+      const el = document.getElementById("root");
+      if (el) {
+        el.scrollIntoView();
+        el.focus();
+      }
+    }, 0);
   }, [isLoading]);
 
   return (
@@ -35,10 +33,6 @@ const Layout = ({ children }) => {
       <div id='root'>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-
-          <a className='skip-to-content' href='#content'>
-            Skip to Content
-          </a>
 
           {isLoading ? (
             <Loader finishLoading={() => setIsLoading(false)} />

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Layout from "./components/layout";
+import Layout from "./components/Layout";
+import Banner from "./components/Banner";
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
@@ -9,7 +10,9 @@ const StyledMainContainer = styled.main`
 function App() {
   return (
     <Layout>
-      <StyledMainContainer className='fillHeight'></StyledMainContainer>
+      <StyledMainContainer className='fillHeight'>
+        <Banner></Banner>
+      </StyledMainContainer>
     </Layout>
   );
 }

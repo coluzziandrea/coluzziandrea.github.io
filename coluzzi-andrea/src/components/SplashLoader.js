@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import anime from "animejs";
 import styled from "styled-components";
-import IconLoader from "./icons/loader";
+import SplashIconLoader from "./icons/SplashIconLoader";
 
 const StyledLoader = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -13,7 +13,7 @@ const StyledLoader = styled.div`
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--background-primary-dark);
+  background-color: var(--yale-900);
   z-index: 99;
 
   .logo-wrapper {
@@ -83,7 +83,7 @@ const Loader = ({ finishLoading }) => {
   return (
     <StyledLoader className='loader' isMounted={isMounted}>
       <div className='logo-wrapper'>
-        <IconLoader />
+        <SplashIconLoader />
       </div>
     </StyledLoader>
   );
