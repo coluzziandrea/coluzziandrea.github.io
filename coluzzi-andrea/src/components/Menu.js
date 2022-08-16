@@ -201,7 +201,7 @@ const Menu = () => {
           aria-label='Menu'
         >
           <div className='ham-box'>
-            <div className='ham-box-inner' />
+            <div className='ham-box-inner'></div>
           </div>
         </StyledHamburgerButton>
 

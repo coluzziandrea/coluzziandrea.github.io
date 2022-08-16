@@ -22,7 +22,7 @@ const globalStyle = createGlobalStyle`
 
     html {
         scrollbar-width: thin;
-        scrollbar-color: var(--teal-800) var(--yale-800);
+        scrollbar-color: var(--gray) var(--yale-800);
     }
     ::-webkit-scrollbar {
         width: 12px;
@@ -31,7 +31,7 @@ const globalStyle = createGlobalStyle`
         background: var(--yale-800);
     }
     ::-webkit-scrollbar-thumb {
-        background-color: var(--teal-800);
+        background-color: var(--gray);
         border: 3px solid var(--yale-800);
         border-radius: 10px;
     }
@@ -146,6 +146,40 @@ const globalStyle = createGlobalStyle`
     font-size: clamp(40px, 8vw, 80px);
   }
 
+
+  .section-heading {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0 40px;
+    width: 100%;
+    font-family: var(--font-mono);
+    color: var(--teal-600);
+    font-size: clamp(26px, 5vw, var(--fz-heading));
+    white-space: nowrap;
+
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+      top: -2px;
+      width: 300px;
+      height: 1px;
+      margin-left: 20px;
+      background-color: var(--gray);
+
+      @media (max-width: 1080px) {
+        width: 200px;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      @media (max-width: 600px) {
+        margin-left: 10px;
+      }
+    }
+  }
+
   a {
     display: inline-block;
     text-decoration: none;
@@ -171,6 +205,9 @@ const globalStyle = createGlobalStyle`
   }
 
   p {
+    font-weight: 100;
+    letter-spacing: 0.7px;
+    line-height: 1.3;
     margin: 0 0 15px 0;
 
     &:last-child,

@@ -34,4 +34,6 @@ module.exports = {
       url: "/#contact",
     },
   ],
+
+  skills: ["JavaScript", "TypeScript", "React", "Angular", "Android", "Flutter", "Node.js"],
 };
