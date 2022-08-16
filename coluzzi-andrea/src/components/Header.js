@@ -6,6 +6,7 @@ import useScrollDirection from "../hooks/useScrollDirection";
 import { navLinks } from "../config";
 import resume from "../assets/docs/resume.pdf";
 import Logo from "./icons/Logo";
+import Menu from "./Menu";
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -15,7 +16,7 @@ const StyledHeader = styled.header`
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(10, 25, 47, 0.85);
+  background-color: var(--yale-800);
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -68,13 +69,6 @@ const StyledNav = styled.nav`
       width: 42px;
       height: 42px;
 
-      &:hover,
-      &:focus {
-        svg {
-          fill: var(--teal-400);
-        }
-      }
-
       svg {
         fill: none;
         transition: var(--transition);
@@ -92,7 +86,7 @@ const StyledLinks = styled.div`
     display: none;
   }
 
-  ol {
+  ul {
     ${({ theme }) => theme.mixins.flexBetween};
     padding: 0;
     margin: 0;
@@ -102,18 +96,10 @@ const StyledLinks = styled.div`
       margin: 0 5px;
       position: relative;
       counter-increment: item 1;
-      font-size: var(--fz-xs);
+      font-size: var(--fz-sm);
 
       a {
         padding: 10px;
-
-        &:before {
-          content: "0" counter(item) ".";
-          margin-right: 5px;
-          color: var(--green);
-          font-size: var(--fz-xxs);
-          text-align: right;
-        }
       }
     }
   }
@@ -200,7 +186,7 @@ const Header = () => {
           <TransitionGroup component={null}>
             {isMounted && (
               <CSSTransition classNames='fade' timeout={1000}>
-                <div>Menu</div>
+                <Menu />
               </CSSTransition>
             )}
           </TransitionGroup>

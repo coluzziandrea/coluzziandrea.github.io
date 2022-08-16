@@ -36,6 +36,10 @@ const globalStyle = createGlobalStyle`
         border-radius: 10px;
     }
 
+    ::selection {
+      background-color: var(--yale-700);
+    }
+
     body {
         margin: 0;
         width: 100%;

@@ -11,6 +11,43 @@ const mixins = {
     justify-content: space-between;
     align-items: center;
   `,
+  link: css`
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: var(--transition);
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--teal-500);
+      outline: 0;
+    }
+  `,
+
+  smallButton: css`
+    color: var(--teal-400);
+    background-color: transparent;
+    border: 1px solid var(--teal-400);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    font-size: var(--fz-xs);
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--yale-700);
+      outline: none;
+    }
+    &:after {
+      display: none !important;
+    }
+  `,
   bigButton: css`
     color: var(--teal-400);
     background-color: transparent;
@@ -26,9 +63,7 @@ const mixins = {
     &:hover,
     &:focus,
     &:active {
-      background-color: var(--teal-200);
-      color: var(--teal-600);
-      border-color: var(--teal-600);
+      background-color: var(--yale-700);
       outline: none;
     }
     &:after {
