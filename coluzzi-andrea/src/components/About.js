@@ -127,7 +127,7 @@ const About = () => {
   }, []);
 
   return (
-    <StyledAbout id='about'>
+    <StyledAbout id='about' ref={revealContainer}>
       <h2 className='section-heading'>About Me</h2>
       <div className='inner'>
         <StyledText>
