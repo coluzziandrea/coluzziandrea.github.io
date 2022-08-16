@@ -5,9 +5,8 @@ import useOnClickOutside from "../hooks/useOnClickOutside";
 import { navLinks } from "../config";
 import resume from "../assets/docs/resume.pdf";
 
-const StyledMenu = styled.button`
+const StyledMenu = styled.div`
   display: none;
-  background-color: transparent;
 
   @media (max-width: 768px) {
     display: block;
