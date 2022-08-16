@@ -5,6 +5,7 @@ import GlobalStyle from "../styles/GlobalStyle";
 import theme from "../styles/Theme";
 import Loader from "./SplashLoader";
 import Header from "./Header";
+import Sidebar from "./Sidebar";
 
 const StyledContent = styled.div`
   display: flex;
@@ -40,6 +41,7 @@ const Layout = ({ children }) => {
           ) : (
             <StyledContent>
               <Header></Header>
+              <Sidebar></Sidebar>
               <div id='content'>{children}</div>
             </StyledContent>
           )}
