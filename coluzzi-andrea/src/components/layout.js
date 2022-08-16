@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/GlobalStyle";
 import theme from "../styles/Theme";
 import Loader from "./SplashLoader";
+import Header from "./Header";
 
 const StyledContent = styled.div`
   display: flex;
@@ -38,6 +39,7 @@ const Layout = ({ children }) => {
             <Loader finishLoading={() => setIsLoading(false)} />
           ) : (
             <StyledContent>
+              <Header></Header>
               <div id='content'>{children}</div>
             </StyledContent>
           )}

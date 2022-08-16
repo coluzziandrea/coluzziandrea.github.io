@@ -6,6 +6,11 @@ const mixins = {
     justify-content: center;
     align-items: center;
   `,
+  flexBetween: css`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  `,
   bigButton: css`
     color: var(--teal-400);
     background-color: transparent;

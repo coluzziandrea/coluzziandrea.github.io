@@ -43,6 +43,9 @@ const variables = css`
     --fz-xl: 20px;
     --fz-xxl: 22px;
     --fz-heading: 32px;
+
+    --nav-height: 100px;
+    --nav-scroll-height: 70px;
   }
 `;
 
