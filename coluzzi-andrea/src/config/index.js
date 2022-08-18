@@ -79,4 +79,22 @@ module.exports = {
       bulletPoints: ["Design and development of software systems for industrial automation."],
     },
   ],
+
+  projects: [
+    {
+      title: "Dietisy",
+      details:
+        "Android Application built for people who want to track their diet progresses. Dietisy is an application that allows you to constantly monitor your diet progress by monitoring your weight, body measurements and height.",
+      link: "https://play.google.com/store/apps/details?id=com.andreacoluzzi.dietisy",
+    },
+  ],
+
+  otherProjects: [
+    {
+      title: "Band Together",
+      details:
+        "Web Application implemented using the framework Ruby On Rails. Social Media that helps Musicians to find other people to build a Band and to manage events.",
+      github: "https://github.com/coluzziandrea/Band_Together",
+    },
+  ],
 };
