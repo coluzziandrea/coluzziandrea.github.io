@@ -50,7 +50,7 @@ const variables = css`
     --nav-scroll-height: 70px;
 
     --tab-height: 42px;
-    --tab-width: 120px;
+    --tab-width: 250px;
 
     --hamburger-width: 30px;
 

@@ -21,7 +21,7 @@ const mixins = {
     &:hover,
     &:active,
     &:focus {
-      color: var(--teal-500);
+      color: var(--teal-400);
       outline: 0;
     }
   `,
@@ -85,17 +85,17 @@ const mixins = {
     text-decoration-skip-ink: auto;
     position: relative;
     transition: var(--transition);
-    color: var(--teal-600);
+    color: var(--teal-500);
     &:hover,
     &:focus,
     &:active {
-      color: var(--teal-600);
+      color: var(--teal-500);
       outline: 0;
       &:after {
         width: 100%;
       }
       & > * {
-        color: var(--teal-600) !important;
+        color: var(--teal-500) !important;
         transition: var(--transition);
       }
     }
@@ -105,10 +105,27 @@ const mixins = {
       width: 0;
       height: 1px;
       position: relative;
-      bottom: 0.37em;
-      background-color: var(--teal-600);
+      bottom: 0;
+      background-color: var(--teal-500);
       transition: var(--transition);
       opacity: 0.5;
+    }
+  `,
+  fancyList: css`
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: var(--fz-lg);
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      &:before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: var(--teal-400);
+      }
     }
   `,
 };

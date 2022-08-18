@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
-import { skills } from "../config";
-import sr from "../utils/sr";
-import photo from "../assets/images/me.jpg";
+import { skills } from "../../config";
+import sr from "../../utils/sr";
+import photo from "../../assets/images/me.jpg";
 
 const StyledAbout = styled.section`
   max-width: 900px;

@@ -154,7 +154,7 @@ const globalStyle = createGlobalStyle`
     margin: 10px 0 40px;
     width: 100%;
     font-family: var(--font-mono);
-    color: var(--teal-600);
+    color: var(--teal-500);
     font-size: clamp(26px, 5vw, var(--fz-heading));
     white-space: nowrap;
 
