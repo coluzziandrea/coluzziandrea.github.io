@@ -68,3 +68,11 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
    ```
 
 4. Congrats your site is up and running.
+
+## Deploy to Github Pages
+
+To deploy the software to Github pages, and making the changes show on www.coluzziandrea.com, run the following:
+
+```bash
+npm run deploy
+```
