@@ -1,29 +1,29 @@
-import './App.css';
-import Header from './components/Header/Header';
-import About from './components/About/About';
-import Skills from './components/Skills/Skills';
-import Projects from './components/Projects/Projects';
-import Contacts from './components/Contacts/Contacts';
-import Sidebar from './components/Sidebar/Sidebar';
+import React from "react";
+import styled from "styled-components";
+import Layout from "./components/Layout";
+import Banner from "./components/section/Banner";
+import About from "./components/section/About";
+import Jobs from "./components/section/Jobs";
+import Projects from "./components/section/Projects";
+import OtherProjects from "./components/section/OtherProjects";
+import Contacts from "./components/section/Contacts";
+
+const StyledMainContainer = styled.main`
+  counter-reset: section;
+`;
 
 function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <About />
-        <Skills />
-        <Projects />
-        <Contacts />
-        <Sidebar />
-      </main>
-
-      <footer>
-        <p class='copy'>
-          &copy; Copyright 2022 <i>Coluzzi Andrea</i>
-        </p>
-      </footer>
-    </>
+    <Layout>
+      <StyledMainContainer className='fillHeight'>
+        <Banner></Banner>
+        <About></About>
+        <Jobs></Jobs>
+        <Projects></Projects>
+        <OtherProjects></OtherProjects>
+        <Contacts></Contacts>
+      </StyledMainContainer>
+    </Layout>
   );
 }
 
