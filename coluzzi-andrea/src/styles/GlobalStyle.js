@@ -180,6 +180,7 @@ const globalStyle = createGlobalStyle`
     }
   }
 
+
   a {
     display: inline-block;
     text-decoration: none;

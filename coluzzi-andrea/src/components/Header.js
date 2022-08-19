@@ -7,6 +7,7 @@ import { navLinks } from "../config";
 import resume from "../assets/docs/resume.pdf";
 import Logo from "./icons/Logo";
 import Menu from "./Menu";
+import Icon from "./icons/icon";
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -100,6 +101,14 @@ const StyledLinks = styled.div`
 
       a {
         padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
   }
@@ -167,7 +176,10 @@ const Header = () => {
                   navLinks.map(({ url, name }, i) => (
                     <CSSTransition key={i} classNames='fadedown' timeout={1000}>
                       <li key={i} style={{ transitionDelay: `${i * 100}ms` }}>
-                        <a href={url}>{name}</a>
+                        <a href={url}>
+                          <Icon name={name}></Icon>
+                          {name}
+                        </a>
                       </li>
                     </CSSTransition>
                   ))}
