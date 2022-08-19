@@ -106,9 +106,9 @@ module.exports = {
   otherProjects: [
     {
       title: "Band Together",
-      details:
-        "Web Application implemented using the framework Ruby On Rails. Social Media that helps Musicians to find other people to build a Band and to manage events.",
+      html: "Web Application implemented using the framework Ruby On Rails. <br>Social Media that helps Musicians to find other people to build a Band and to manage events.",
       github: "https://github.com/coluzziandrea/Band_Together",
+      techStack: ["Ruby on Rails", "Javascript", "HTML", "CSS"],
     },
   ],
 };

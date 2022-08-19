@@ -3,9 +3,12 @@ import IconGitHub from "./github";
 import IconLinkedin from "./linkedin";
 import IconTwitter from "./twitter";
 import IconExternal from "./external";
+import IconFolder from "./folder";
 
 const Icon = ({ name }) => {
   switch (name) {
+    case "Folder":
+      return <IconFolder />;
     case "GitHub":
       return <IconGitHub />;
     case "Linkedin":

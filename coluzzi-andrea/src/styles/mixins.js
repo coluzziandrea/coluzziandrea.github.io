@@ -25,7 +25,29 @@ const mixins = {
       outline: 0;
     }
   `,
+  button: css`
+    color: var(--teal-400);
+    background-color: transparent;
+    border: 1px solid var(--teal-400);
+    border-radius: var(--border-radius);
+    font-size: var(--fz-xs);
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 1.25rem 1.75rem;
 
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--yale-700);
+      outline: none;
+    }
+    &:after {
+      display: none !important;
+    }
+  `,
   smallButton: css`
     color: var(--teal-400);
     background-color: transparent;
