@@ -137,7 +137,7 @@ const About = () => {
               source.
             </p>
             <p>
-              I have a Bachelor's degree in Computer Engineering gained at the{" "}
+              I have a Bachelor's degree in Computer Engineering earned at
               <a href='https://www.uniroma1.it/en'>'La Sapienza', University of Rome</a>.
             </p>
             <p>I Always Try to Keep Up With the Latest Technology Trends.</p>
