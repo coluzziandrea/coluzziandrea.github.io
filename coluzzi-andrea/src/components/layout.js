@@ -7,6 +7,7 @@ import Loader from "./SplashLoader";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Email from "./Email";
+import Footer from "./Footer";
 
 const StyledContent = styled.div`
   display: flex;
@@ -44,7 +45,10 @@ const Layout = ({ children }) => {
               <Header></Header>
               <Sidebar></Sidebar>
               <Email></Email>
-              <div id='content'>{children}</div>
+              <div id='content'>
+                {children}
+                <Footer></Footer>
+              </div>
             </StyledContent>
           )}
         </ThemeProvider>

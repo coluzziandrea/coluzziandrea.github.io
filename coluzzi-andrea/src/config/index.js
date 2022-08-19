@@ -110,5 +110,11 @@ module.exports = {
       github: "https://github.com/coluzziandrea/Band_Together",
       techStack: ["Ruby on Rails", "Javascript", "HTML", "CSS"],
     },
+    {
+      title: "Refurbify",
+      html: "Web Application aimed to give used objects a new life. <br>It is inspired by most famous product <a href='https://www.subito.it/'>Subito</a>",
+      github: "https://github.com/coluzziandrea/Refurbify",
+      techStack: ["Angular", "RxJS", "Typescript", "HTML", "CSS"],
+    },
   ],
 };
