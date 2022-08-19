@@ -18,8 +18,8 @@ const srConfig = (delay = 200, viewFactor = 0.25) => ({
   viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
 });
 
-const sr = (container) => {
-  mySr.reveal(container, srConfig());
+const sr = (container, delay = 200) => {
+  mySr.reveal(container, srConfig(delay));
 };
 
 export default sr;

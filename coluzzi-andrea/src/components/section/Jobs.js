@@ -129,6 +129,10 @@ const StyledTabPanel = styled.div`
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
   }
+
+  .job-points {
+    font-weight: 100;
+  }
 `;
 
 const Jobs = () => {
@@ -187,7 +191,7 @@ const Jobs = () => {
 
                   <p className='range'>{job.range}</p>
 
-                  <div>
+                  <div className='job-points'>
                     <ul>
                       {job.bulletPoints.map((point) => {
                         return <li>{point}</li>;

@@ -85,17 +85,17 @@ const mixins = {
     text-decoration-skip-ink: auto;
     position: relative;
     transition: var(--transition);
-    color: var(--teal-500);
+    color: var(--teal-400);
     &:hover,
     &:focus,
     &:active {
-      color: var(--teal-500);
+      color: var(--teal-400);
       outline: 0;
       &:after {
         width: 100%;
       }
       & > * {
-        color: var(--teal-500) !important;
+        color: var(--teal-400) !important;
         transition: var(--transition);
       }
     }
@@ -106,7 +106,7 @@ const mixins = {
       height: 1px;
       position: relative;
       bottom: 0;
-      background-color: var(--teal-500);
+      background-color: var(--teal-400);
       transition: var(--transition);
       opacity: 0.5;
     }
@@ -127,6 +127,11 @@ const mixins = {
         color: var(--teal-400);
       }
     }
+  `,
+  resetList: css`
+    list-style: none;
+    padding: 0;
+    margin: 0;
   `,
 };
 

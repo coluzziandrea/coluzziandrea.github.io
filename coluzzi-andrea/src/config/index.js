@@ -47,6 +47,7 @@ module.exports = {
       bulletPoints: [
         "Designing & Developing Fleet Management solutions for Automotive Business customers. Applying IoT to the automotive sector.",
         "Building a microservices based architecture to manage connected vehicle's data and delivering our customers the best solution for their business needs.",
+        "Designing & Implementing professional UX for quality software solution",
       ],
     },
     {
@@ -57,6 +58,7 @@ module.exports = {
       url: "https://www.mariniimpianti.it/",
       bulletPoints: [
         "Analysis, designing and implementation of software solutions for diagnostic and maintenance of Railway Systems, main customer: Rete Ferroviaria Italiana (RFI).",
+        "Designing & Implementing multi-module software system to handle real-time data.",
       ],
     },
     {
@@ -82,10 +84,22 @@ module.exports = {
 
   projects: [
     {
+      title: "Guitarly",
+      category: "Web Application",
+      image: "guitarly",
+      html: "A Web Application for visualizing and editing your music sheets. <br>View guitars, basses, drums, etc... on different tracks, export your tab and/or import data from <a href='https://www.guitar-pro.com/'>Guitar Pro</a>.",
+      link: "https://guitarly-coluzziandrea.vercel.app/",
+      github: "https://github.com/coluzziandrea/Guitarly",
+      techStack: ["Vue", "Pinia", "Tone.js", "Tailwind"],
+    },
+    {
       title: "Dietisy",
-      details:
-        "Android Application built for people who want to track their diet progresses. Dietisy is an application that allows you to constantly monitor your diet progress by monitoring your weight, body measurements and height.",
+      category: "Mobile Application",
+      image: "dietisy",
+      html: "Android Application built for people who want to track their diet progresses. <br>Dietisy is an application that allows you to constantly monitor your diet progress by monitoring your weight, body measurements and height.",
       link: "https://play.google.com/store/apps/details?id=com.andreacoluzzi.dietisy",
+      github: "https://github.com/coluzziandrea/Dietisy",
+      techStack: ["Android", "Java", "MVVM"],
     },
   ],
 
