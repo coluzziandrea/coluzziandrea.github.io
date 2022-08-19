@@ -180,6 +180,17 @@ const globalStyle = createGlobalStyle`
     }
   }
 
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    vertical-align: middle;
+
+    &.feather {
+      fill: none;
+    }
+  }
+
   a {
     display: inline-block;
     text-decoration: none;

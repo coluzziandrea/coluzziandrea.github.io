@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import useOnClickOutside from "../hooks/useOnClickOutside";
 import { navLinks } from "../config";
 import resume from "../assets/docs/resume.pdf";
+import Icon from "./icons/icon";
 
 const StyledMenu = styled.div`
   display: none;
@@ -134,6 +135,15 @@ const StyledSidebar = styled.aside`
       ${({ theme }) => theme.mixins.link};
       width: 100%;
       padding: 3px 20px 20px;
+
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 
@@ -211,6 +221,7 @@ const Menu = () => {
                 {navLinks.map(({ url, name }, i) => (
                   <li key={i}>
                     <a href={url} onClick={() => setMenuOpen(false)}>
+                      <Icon name={name}></Icon>
                       {name}
                     </a>
                   </li>
