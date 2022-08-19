@@ -132,14 +132,26 @@ const About = () => {
       <div className='inner'>
         <StyledText>
           <div>
-            <p>I'm a Full Stack Software Engineer.</p>
+            <p>
+              I'm a Software Engineer, living in Italy. I'm specializing in web development and open
+              source.
+            </p>
+            <p>
+              I have a Bachelor's degree in Computer Engineering gained at the{" "}
+              <a href='https://www.uniroma1.it/en'>'La Sapienza', University of Rome</a>.
+            </p>
             <p>I Always Try to Keep Up With the Latest Technology Trends.</p>
             <p>
               I always try to find the best solutions for my tasks and the best way to implement
               them. I deeply care about building modules that suit the requirements and are
               re-usable in the future.
             </p>
-            <p>I Love the Open Source Community and I'm contributing to some projects.</p>
+            <p>
+              I Love the Open Source Community and I'm contributing to{" "}
+              <a href='https://github.com/coluzziandrea?tab=repositories&q=&type=fork&language=&sort='>
+                some projects.
+              </a>
+            </p>
             <p>I like sharing work experiences with my colleagues and I love team work.</p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
