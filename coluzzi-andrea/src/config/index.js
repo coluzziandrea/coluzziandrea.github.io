@@ -105,6 +105,13 @@ module.exports = {
 
   otherProjects: [
     {
+      title: "Facebook Clone",
+      html: "Web Application built with Next Js, Firebase & Tailwind, light clone of <a href='https://www.facebook.com/'>Facebook</a>.<br>You can log in with your Facebook Account, post something & view latest posts from other people.",
+      github: "https://github.com/coluzziandrea/facebook-clone",
+      link: "https://facebook-clone-one-navy.vercel.app/",
+      techStack: ["NextJs", "Firebase", "Tailwind"],
+    },
+    {
       title: "Band Together",
       html: "Web Application implemented using the framework Ruby On Rails. <br>Social Media that helps Musicians to find other people to build a Band and to manage events.",
       github: "https://github.com/coluzziandrea/Band_Together",
