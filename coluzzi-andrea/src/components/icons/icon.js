@@ -8,6 +8,7 @@ import IconEmail from "./Email";
 import IconProject from "./Project";
 import IconProfile from "./Profile";
 import IconJob from "./Job";
+import CommunityIcon from "./Community";
 
 const Icon = ({ name }) => {
   switch (name) {
@@ -27,6 +28,8 @@ const Icon = ({ name }) => {
       return <IconProfile />;
     case "Experience":
       return <IconJob />;
+    case "Community":
+      return <CommunityIcon />;
     default:
       return <IconExternal />;
   }

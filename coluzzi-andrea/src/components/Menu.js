@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
-import styled from "styled-components";
-import { Helmet } from "react-helmet";
-import useOnClickOutside from "../hooks/useOnClickOutside";
-import { navLinks } from "../config";
-import resume from "../assets/docs/resume.pdf";
-import Icon from "./icons/icon";
+import React, { useState, useEffect, useRef } from 'react';
+import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
+import useOnClickOutside from '../hooks/useOnClickOutside';
+import { navLinks } from '../config';
+import Icon from './icons/icon';
 
 const StyledMenu = styled.div`
   display: none;
@@ -52,11 +51,12 @@ const StyledHamburgerButton = styled.button`
     transition-delay: ${(props) => (props.menuOpen ? `0.12s` : `0s`)};
     transform: rotate(${(props) => (props.menuOpen ? `225deg` : `0deg`)});
     transition-timing-function: cubic-bezier(
-      ${(props) => (props.menuOpen ? `0.215, 0.61, 0.355, 1` : `0.55, 0.055, 0.675, 0.19`)}
+      ${(props) =>
+        props.menuOpen ? `0.215, 0.61, 0.355, 1` : `0.55, 0.055, 0.675, 0.19`}
     );
     &:before,
     &:after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       left: auto;
@@ -74,13 +74,14 @@ const StyledHamburgerButton = styled.button`
       top: ${(props) => (props.menuOpen ? `0` : `-10px`)};
       opacity: ${(props) => (props.menuOpen ? 0 : 1)};
       transition: ${({ menuOpen }) =>
-        menuOpen ? "var(--ham-before-active)" : "var(--ham-before)"};
+        menuOpen ? 'var(--ham-before-active)' : 'var(--ham-before)'};
     }
     &:after {
       width: ${(props) => (props.menuOpen ? `100%` : `80%`)};
       bottom: ${(props) => (props.menuOpen ? `0` : `-10px`)};
       transform: rotate(${(props) => (props.menuOpen ? `-90deg` : `0`)});
-      transition: ${({ menuOpen }) => (menuOpen ? "var(--ham-after-active)" : "var(--ham-after)")};
+      transition: ${({ menuOpen }) =>
+        menuOpen ? 'var(--ham-after-active)' : 'var(--ham-after)'};
     }
   }
 `;
@@ -101,7 +102,7 @@ const StyledSidebar = styled.aside`
     box-shadow: -10px 0px 30px -15px var(--yale-900);
     z-index: 9;
     transform: translateX(${(props) => (props.menuOpen ? 0 : 100)}vw);
-    visibility: ${(props) => (props.menuOpen ? "visible" : "hidden")};
+    visibility: ${(props) => (props.menuOpen ? 'visible' : 'hidden')};
     transition: var(--transition);
   }
 
@@ -146,13 +147,6 @@ const StyledSidebar = styled.aside`
       }
     }
   }
-
-  .resume-link {
-    ${({ theme }) => theme.mixins.bigButton};
-    padding: 18px 50px;
-    margin: 10% auto 0;
-    width: max-content;
-  }
 `;
 
 const Menu = () => {
@@ -168,8 +162,8 @@ const Menu = () => {
 
   const onKeyDown = (e) => {
     switch (e.key) {
-      case "Escape":
-      case "Esc": {
+      case 'Escape':
+      case 'Esc': {
         setMenuOpen(false);
         break;
       }
@@ -187,19 +181,19 @@ const Menu = () => {
   };
 
   useEffect(() => {
-    document.addEventListener("keydown", onKeyDown);
-    window.addEventListener("resize", onResize);
+    document.addEventListener('keydown', onKeyDown);
+    window.addEventListener('resize', onResize);
 
     return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      window.removeEventListener("resize", onResize);
+      document.removeEventListener('keydown', onKeyDown);
+      window.removeEventListener('resize', onResize);
     };
   }, []);
 
   return (
     <StyledMenu>
       <Helmet>
-        <body className={menuOpen ? "blur" : ""} />
+        <body className={menuOpen ? 'blur' : ''} />
       </Helmet>
 
       <div ref={wrapperRef}>
@@ -214,7 +208,11 @@ const Menu = () => {
           </div>
         </StyledHamburgerButton>
 
-        <StyledSidebar menuOpen={menuOpen} aria-hidden={!menuOpen} tabIndex={menuOpen ? 1 : -1}>
+        <StyledSidebar
+          menuOpen={menuOpen}
+          aria-hidden={!menuOpen}
+          tabIndex={menuOpen ? 1 : -1}
+        >
           <nav ref={navRef}>
             {navLinks && (
               <ul>
@@ -228,10 +226,6 @@ const Menu = () => {
                 ))}
               </ul>
             )}
-
-            <a href={resume} className='resume-link'>
-              Resume
-            </a>
           </nav>
         </StyledSidebar>
       </div>
