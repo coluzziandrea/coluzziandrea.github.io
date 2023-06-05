@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-import styled, { css } from "styled-components";
-import useScrollDirection from "../hooks/useScrollDirection";
-import { navLinks } from "../config";
-import resume from "../assets/docs/resume.pdf";
-import Logo from "./icons/Logo";
-import Menu from "./Menu";
-import Icon from "./icons/icon";
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import styled, { css } from 'styled-components';
+import useScrollDirection from '../hooks/useScrollDirection';
+import { navLinks } from '../config';
+import Logo from './icons/Logo';
+import Menu from './Menu';
+import Icon from './icons/icon';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -33,7 +32,7 @@ const StyledHeader = styled.header`
 
   @media (prefers-reduced-motion: no-preference) {
     ${(props) =>
-      props.scrollDirection === "up" &&
+      props.scrollDirection === 'up' &&
       !props.scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
@@ -43,7 +42,7 @@ const StyledHeader = styled.header`
       `};
 
     ${(props) =>
-      props.scrollDirection === "down" &&
+      props.scrollDirection === 'down' &&
       !props.scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
@@ -112,17 +111,11 @@ const StyledLinks = styled.div`
       }
     }
   }
-
-  .resume-button {
-    ${({ theme }) => theme.mixins.smallButton};
-    margin-left: 15px;
-    font-size: var(--fz-xs);
-  }
 `;
 
 const Header = () => {
   const [isMounted, setIsMounted] = useState(false);
-  const scrollDirection = useScrollDirection("down");
+  const scrollDirection = useScrollDirection('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
 
   const handleScroll = () => {
@@ -134,11 +127,11 @@ const Header = () => {
       setIsMounted(true);
     }, 100);
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
       clearTimeout(timeout);
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -150,14 +143,11 @@ const Header = () => {
     </div>
   );
 
-  const ResumeLink = (
-    <a className='resume-button' href={resume} target='_blank' rel='noopener noreferrer'>
-      Resume
-    </a>
-  );
-
   return (
-    <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
+    <StyledHeader
+      scrollDirection={scrollDirection}
+      scrolledToTop={scrolledToTop}
+    >
       <StyledNav>
         <>
           <TransitionGroup component={null}>
@@ -185,14 +175,6 @@ const Header = () => {
                   ))}
               </TransitionGroup>
             </ul>
-
-            <TransitionGroup component={null}>
-              {isMounted && (
-                <CSSTransition classNames='fadedown' timeout={1000}>
-                  <div style={{ transitionDelay: `${navLinks.length * 100}ms` }}>{ResumeLink}</div>
-                </CSSTransition>
-              )}
-            </TransitionGroup>
           </StyledLinks>
 
           <TransitionGroup component={null}>

@@ -5,6 +5,7 @@ import Banner from "./components/section/Banner";
 import About from "./components/section/About";
 import Jobs from "./components/section/Jobs";
 import Projects from "./components/section/Projects";
+import Community from "./components/section/Community";
 import OtherProjects from "./components/section/OtherProjects";
 import Contacts from "./components/section/Contacts";
 
@@ -19,6 +20,7 @@ function App() {
         <Banner></Banner>
         <About></About>
         <Jobs></Jobs>
+        <Community></Community>
         <Projects></Projects>
         <OtherProjects></OtherProjects>
         <Contacts></Contacts>
