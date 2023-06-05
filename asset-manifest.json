@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.js": "/static/js/main.6cd8384f.js",
+    "main.js": "/static/js/main.e366e522.js",
     "static/js/787.6d2024fa.chunk.js": "/static/js/787.6d2024fa.chunk.js",
     "static/media/guitarly.png": "/static/media/guitarly.78684b26eb2767ae3147.png",
-    "static/media/Dietisy.png": "/static/media/Dietisy.d2a5a9d301183d1e3ce3.png",
+    "static/media/dietisy.png": "/static/media/dietisy.d2a5a9d301183d1e3ce3.png",
     "static/media/Ubuntu-Italic.ttf": "/static/media/Ubuntu-Italic.fbb3310412795b02afc4.ttf",
     "static/media/Ubuntu-MediumItalic.ttf": "/static/media/Ubuntu-MediumItalic.d68d789a6be6e034d129.ttf",
     "static/media/Ubuntu-Regular.ttf": "/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
     "static/media/Ubuntu-Medium.ttf": "/static/media/Ubuntu-Medium.e37c5546eb1a6efc4818.ttf",
     "static/media/Ubuntu-BoldItalic.ttf": "/static/media/Ubuntu-BoldItalic.6fe54aaa592aa54a8c88.ttf",
     "static/media/Ubuntu-Bold.ttf": "/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
-    "static/media/resume.pdf": "/static/media/resume.ca0953b64122c86bdee6.pdf",
     "static/media/JetBrainsMono-MediumItalic.ttf": "/static/media/JetBrainsMono-MediumItalic.fc6964dac57e2a6cfd8e.ttf",
     "static/media/JetBrainsMono-BoldItalic.ttf": "/static/media/JetBrainsMono-BoldItalic.0b8164d760caecf84507.ttf",
     "static/media/JetBrainsMono-Italic.ttf": "/static/media/JetBrainsMono-Italic.2ad8dd748e87362366a9.ttf",
     "static/media/JetBrainsMono-Medium.ttf": "/static/media/JetBrainsMono-Medium.0159468276a0712794b2.ttf",
     "static/media/JetBrainsMono-Regular.ttf": "/static/media/JetBrainsMono-Regular.be594ccdd8a8dd0ed5db.ttf",
     "static/media/JetBrainsMono-Bold.ttf": "/static/media/JetBrainsMono-Bold.a0394baa305e2ce71971.ttf",
+    "static/media/lit.png": "/static/media/lit.71b1e399cf7299c28afb.png",
     "static/media/me.jpg": "/static/media/me.ba6a4002193f0a9503ed.jpg",
     "index.html": "/index.html",
-    "main.6cd8384f.js.map": "/static/js/main.6cd8384f.js.map",
+    "main.e366e522.js.map": "/static/js/main.e366e522.js.map",
     "787.6d2024fa.chunk.js.map": "/static/js/787.6d2024fa.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.6cd8384f.js"
+    "static/js/main.e366e522.js"
   ]
 }
