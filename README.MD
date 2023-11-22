@@ -62,17 +62,9 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 3. After editing run the following bash commands:
 
    ```bash
-   cd coluzziandrea.github.io/coluzzi-andrea
+   cd coluzziandrea.github.io
    npm install
    npm start
    ```
 
 4. Congrats your site is up and running.
-
-## Deploy to Github Pages
-
-To deploy the software to Github pages, and making the changes show on www.coluzziandrea.com, run the following:
-
-```bash
-npm run deploy
-```
