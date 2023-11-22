@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import resume from '../../assets/docs/resume.pdf'
 
 const StyledSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -69,11 +70,11 @@ const Banner = () => {
   const five = (
     <a
       className='email-link'
-      href='https://coluzziandrea.hashnode.dev/'
+      href={resume}
       target='_blank'
-      rel='noreferrer'
+      rel='noopener noreferrer'
     >
-      Read My Blog
+      Resume
     </a>
   )
 
