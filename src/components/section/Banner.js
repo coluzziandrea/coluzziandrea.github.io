@@ -56,13 +56,13 @@ const Banner = () => {
 
   const one = <h1>Hello, my name is</h1>
   const two = <h2 className='big-heading'>Andrea Coluzzi</h2>
-  const three = <h3 className='big-heading'>I am a Web Developer.</h3>
+  const three = <h3 className='big-heading'>I am a Software Engineer.</h3>
   const four = (
     <>
       <p className='short-about'>
-        I am a Software Engineer who is passionate about techonology and problem
-        solving. I am experienced in many software languages, methods and
-        techniques.
+        I&apos;m a Full-Stack Software Engineer who is passionate about
+        techonology and problem solving. I&apos;m experienced in many software
+        languages, methods and techniques.
       </p>
     </>
   )

@@ -120,15 +120,6 @@ module.exports = {
 
   projects: [
     {
-      title: 'Guitarly',
-      category: 'Web Application',
-      image: 'guitarly',
-      html: "A Web Application for visualizing and editing your music sheets. <br>View guitars, basses, drums, etc... on different tracks, export your tab and/or import data from <a href='https://www.guitar-pro.com/'>Guitar Pro</a>.",
-      link: 'https://guitarly-coluzziandrea.vercel.app/',
-      github: 'https://github.com/coluzziandrea/Guitarly',
-      techStack: ['Vue', 'Pinia', 'Tone.js', 'Tailwind']
-    },
-    {
       title: 'Dietisy',
       category: 'Mobile Application',
       image: 'dietisy',
@@ -140,6 +131,13 @@ module.exports = {
   ],
 
   otherProjects: [
+    {
+      title: 'Guitarly',
+      html: "A Web Application for visualizing and editing your music sheets. <br>View guitars, basses, drums, etc... on different tracks, export your tab and/or import data from <a href='https://www.guitar-pro.com/'>Guitar Pro</a>.",
+      link: 'https://guitarly-coluzziandrea.vercel.app/',
+      github: 'https://github.com/coluzziandrea/Guitarly',
+      techStack: ['Vue', 'Pinia', 'Tone.js', 'Tailwind']
+    },
     {
       title: 'Facebook Clone',
       html: "Web Application built with Next Js, Firebase & Tailwind, light clone of <a href='https://www.facebook.com/'>Facebook</a>.<br>You can log in with your Facebook Account, post something & view latest posts from other people.",

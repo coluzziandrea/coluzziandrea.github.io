@@ -137,7 +137,8 @@ const About = () => {
               specializing in web development and open source.
             </p>
             <p>
-              I have a Bachelor&apos;s degree in Computer Engineering earned at
+              I have a Bachelor&apos;s degree in Computer Engineering earned
+              at&nbsp;
               <a href='https://www.uniroma1.it/en'>
                 La Sapienza, University of Rome
               </a>

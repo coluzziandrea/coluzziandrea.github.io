@@ -173,9 +173,9 @@ const OtherProjects = () => {
     revealProjects.current.forEach((ref, i) => sr(ref, i * 100))
   }, [])
 
-  const GRID_LIMIT = 6
-  const firstSix = otherProjects.slice(0, GRID_LIMIT)
-  const projectsToShow = showMore ? otherProjects : firstSix
+  const GRID_LIMIT = 2
+  const firstProjects = otherProjects.slice(0, GRID_LIMIT)
+  const projectsToShow = showMore ? otherProjects : firstProjects
 
   const projectInner = project => {
     const mainLink = project.link ? project.link : project.github
