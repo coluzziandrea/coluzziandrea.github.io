@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { socialMedia } from "../config";
-import Side from "./Side";
-import Icon from "./icons/icon";
+import React from 'react'
+import styled from 'styled-components'
+import { socialMedia } from '../config'
+import Side from './Side'
+import Icon from './icons/icon'
 
 const StyledSocialList = styled.ul`
   display: flex;
@@ -13,7 +13,7 @@ const StyledSocialList = styled.ul`
   list-style: none;
 
   &:after {
-    content: "";
+    content: '';
     display: block;
     width: 1px;
     height: 90px;
@@ -40,7 +40,7 @@ const StyledSocialList = styled.ul`
       }
     }
   }
-`;
+`
 
 const Sidebar = () => {
   return (
@@ -56,7 +56,7 @@ const Sidebar = () => {
           ))}
       </StyledSocialList>
     </Side>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar

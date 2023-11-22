@@ -1,6 +1,6 @@
 # coluzziandrea.com
 
-![Coluzzi Andrea Logo](/coluzzi-andrea/public/logo_white_background.jpg)
+![Coluzzi Andrea Logo](/public/logo_white_background.jpg)
 
 <p align="center">
   <h1 align="center">Full Stack Software Engineer</h1>

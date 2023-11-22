@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
+import React, { useEffect, useRef } from 'react'
+import styled from 'styled-components'
 
-import { skills } from "../../config";
-import sr from "../../utils/sr";
-import photo from "../../assets/images/me.jpg";
+import { skills } from '../../config'
+import sr from '../../utils/sr'
+import photo from '../../assets/images/me.jpg'
 
 const StyledAbout = styled.section`
   max-width: 900px;
@@ -17,7 +17,7 @@ const StyledAbout = styled.section`
       display: block;
     }
   }
-`;
+`
 
 const StyledText = styled.div`
   ul.skills-list {
@@ -37,7 +37,7 @@ const StyledText = styled.div`
       font-size: var(--fz-xs);
 
       &:before {
-        content: "▹";
+        content: '▹';
         position: absolute;
         left: 0;
         color: var(--teal-400);
@@ -46,7 +46,7 @@ const StyledText = styled.div`
       }
     }
   }
-`;
+`
 
 const StyledPicture = styled.div`
   position: relative;
@@ -94,7 +94,7 @@ const StyledPicture = styled.div`
 
     &:before,
     &:after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       width: 100%;
@@ -117,14 +117,14 @@ const StyledPicture = styled.div`
       z-index: -1;
     }
   }
-`;
+`
 
 const About = () => {
-  const revealContainer = useRef(null);
+  const revealContainer = useRef(null)
 
   useEffect(() => {
-    sr(revealContainer.current);
-  }, []);
+    sr(revealContainer.current)
+  }, [])
 
   return (
     <StyledAbout id='about' ref={revealContainer}>
@@ -133,28 +133,36 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              I'm a Software Engineer, living in Italy. I'm specializing in web development and open
-              source.
+              I&apos;m a Software Engineer, living in Italy. I&apos;m
+              specializing in web development and open source.
             </p>
             <p>
-              I have a Bachelor's degree in Computer Engineering earned at
-              <a href='https://www.uniroma1.it/en'>'La Sapienza', University of Rome</a>.
+              I have a Bachelor&apos;s degree in Computer Engineering earned at
+              <a href='https://www.uniroma1.it/en'>
+                La Sapienza, University of Rome
+              </a>
+              .
             </p>
             <p>I Always Try to Keep Up With the Latest Technology Trends.</p>
             <p>
-              I always try to find the best solutions for my tasks and the best way to implement
-              them. I deeply care about building modules that suit the requirements and are
-              re-usable in the future.
+              I always try to find the best solutions for my tasks and the best
+              way to implement them. I deeply care about building modules that
+              suit the requirements and are re-usable in the future.
             </p>
             <p>
-              I Love the Open Source Community and I'm contributing to{" "}
+              I Love the Open Source Community and I&apos;m contributing to{' '}
               <a href='https://github.com/coluzziandrea?tab=repositories&q=&type=fork&language=&sort='>
                 some projects.
               </a>
             </p>
-            <p>I like sharing work experiences with my colleagues and I love team work.</p>
+            <p>
+              I like sharing work experiences with my colleagues and I love team
+              work.
+            </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>
+              Here are a few technologies I&apos;ve been working with recently:
+            </p>
           </div>
           <ul className='skills-list'>
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
@@ -163,12 +171,17 @@ const About = () => {
 
         <StyledPicture>
           <div className='wrapper'>
-            <img className='img' src={photo} width={300} alt='Profile Picture' />
+            <img
+              className='img'
+              src={photo}
+              width={300}
+              alt='Profile Picture'
+            />
           </div>
         </StyledPicture>
       </div>
     </StyledAbout>
-  );
-};
+  )
+}
 
-export default About;
+export default About

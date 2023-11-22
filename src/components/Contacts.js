@@ -1,4 +1,4 @@
-import './Contacts.css';
+import './Contacts.css'
 
 function Contacts() {
   return (
@@ -54,7 +54,7 @@ function Contacts() {
         </div>
       </section>
     </>
-  );
+  )
 }
 
-export default Contacts;
+export default Contacts

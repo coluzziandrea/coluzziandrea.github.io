@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
-import sr from "../../utils/sr";
-import Icon from "../icons/icon";
-import { projects } from "../../config";
-import projectImages from "../projectImages";
+import React, { useEffect, useRef } from 'react'
+import styled from 'styled-components'
+import sr from '../../utils/sr'
+import Icon from '../icons/icon'
+import { projects } from '../../config'
+import projectImages from '../projectImages'
 
-const StyledProjects = styled.section``;
+const StyledProjects = styled.section``
 
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
@@ -14,7 +14,7 @@ const StyledProjectsGrid = styled.ul`
     position: relative;
     z-index: 1;
   }
-`;
+`
 
 const StyledProject = styled.li`
   position: relative;
@@ -138,7 +138,7 @@ const StyledProject = styled.li`
         position: static;
 
         &:before {
-          content: "";
+          content: '';
           display: block;
           position: absolute;
           z-index: 0;
@@ -269,7 +269,7 @@ const StyledProject = styled.li`
       }
 
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         width: 100%;
         height: 100%;
@@ -299,16 +299,16 @@ const StyledProject = styled.li`
       }
     }
   }
-`;
+`
 
 const Projects = () => {
-  const revealTitle = useRef(null);
-  const revealProjects = useRef([]);
+  const revealTitle = useRef(null)
+  const revealProjects = useRef([])
 
   useEffect(() => {
-    sr(revealTitle.current);
-    revealProjects.current.forEach((ref, i) => sr(ref, i * 100));
-  }, []);
+    sr(revealTitle.current)
+    revealProjects.current.forEach((ref, i) => sr(ref, i * 100))
+  }, [])
 
   return (
     <StyledProjects id='projects'>
@@ -319,8 +319,8 @@ const Projects = () => {
           return (
             <StyledProject
               key={i}
-              ref={(el) => {
-                revealProjects.current[i] = el;
+              ref={el => {
+                revealProjects.current[i] = el
               }}
             >
               <div className='project-content'>
@@ -345,7 +345,11 @@ const Projects = () => {
                     <a href={project.github} aria-label='GitHub Link'>
                       <Icon name='GitHub' />
                     </a>
-                    <a href={project.link} aria-label='External Link' className='external'>
+                    <a
+                      href={project.link}
+                      aria-label='External Link'
+                      className='external'
+                    >
                       <Icon name='External' />
                     </a>
                   </div>
@@ -353,15 +357,19 @@ const Projects = () => {
               </div>
               <div className='project-image'>
                 <a href={project.link}>
-                  <img src={projectImages[project.image]} alt={project.image} className='img' />
+                  <img
+                    src={projectImages[project.image]}
+                    alt={project.image}
+                    className='img'
+                  />
                 </a>
               </div>
             </StyledProject>
-          );
+          )
         })}
       </StyledProjectsGrid>
     </StyledProjects>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

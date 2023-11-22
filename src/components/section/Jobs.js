@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
-import { CSSTransition } from "react-transition-group";
+import React, { useEffect, useRef, useState } from 'react'
+import styled from 'styled-components'
+import { CSSTransition } from 'react-transition-group'
 
-import sr from "../../utils/sr";
+import sr from '../../utils/sr'
 
-import { jobs } from "../../config";
+import { jobs } from '../../config'
 
 const StyledJobs = styled.section`
   max-width: 900px;
@@ -21,7 +21,7 @@ const StyledJobs = styled.section`
       min-height: 340px;
     }
   }
-`;
+`
 
 const StyledTabList = styled.div`
   position: relative;
@@ -37,7 +37,7 @@ const StyledTabList = styled.div`
     width: 100%;
     margin-bottom: 30px;
   }
-`;
+`
 
 const StyledTabButton = styled.button`
   ${({ theme }) => theme.mixins.link};
@@ -48,7 +48,8 @@ const StyledTabButton = styled.button`
   padding: 0 20px 2px;
   border-left: 2px solid var(--yale-600);
   background-color: transparent;
-  color: ${({ isActive }) => (isActive ? "var(--teal-400)" : "var(--ghost-500)")};
+  color: ${({ isActive }) =>
+    isActive ? 'var(--teal-400)' : 'var(--ghost-500)'};
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
   text-align: left;
@@ -68,7 +69,7 @@ const StyledTabButton = styled.button`
     border-bottom: 2px solid var(--yale-700);
     text-align: center;
   }
-`;
+`
 
 const StyledHighlight = styled.div`
   position: absolute;
@@ -79,7 +80,9 @@ const StyledHighlight = styled.div`
   height: var(--tab-height);
   border-radius: var(--border-radius);
   background: var(--teal-500);
-  transform: translateY(calc(${({ activeTabId }) => activeTabId} * var(--tab-height)));
+  transform: translateY(
+    calc(${({ activeTabId }) => activeTabId} * var(--tab-height))
+  );
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition-delay: 0.1s;
 
@@ -89,9 +92,11 @@ const StyledHighlight = styled.div`
     width: var(--tab-width);
     max-width: var(--tab-width);
     height: 2px;
-    transform: translateX(calc(${({ activeTabId }) => activeTabId} * var(--tab-width)));
+    transform: translateX(
+      calc(${({ activeTabId }) => activeTabId} * var(--tab-width))
+    );
   }
-`;
+`
 
 const StyledTabPanels = styled.div`
   position: relative;
@@ -101,7 +106,7 @@ const StyledTabPanels = styled.div`
   @media (max-width: 600px) {
     margin-left: 0;
   }
-`;
+`
 
 const StyledTabPanel = styled.div`
   width: 100%;
@@ -133,19 +138,19 @@ const StyledTabPanel = styled.div`
   .job-points {
     font-weight: 100;
   }
-`;
+`
 
 const Jobs = () => {
-  const revealContainer = useRef(null);
-  const [activeTabId, setActiveTabId] = useState(0);
+  const revealContainer = useRef(null)
+  const [activeTabId, setActiveTabId] = useState(0)
 
   useEffect(() => {
-    sr(revealContainer.current);
-  }, []);
+    sr(revealContainer.current)
+  }, [])
 
   return (
     <StyledJobs id='jobs' ref={revealContainer}>
-      <h2 className='section-heading'>Where I've Worked</h2>
+      <h2 className='section-heading'>Where I&apos;ve Worked</h2>
       <div className='inner'>
         <StyledTabList role='tablist' aria-label='Job Tabs'>
           {jobs.map((job, i) => {
@@ -156,13 +161,13 @@ const Jobs = () => {
                 onClick={() => setActiveTabId(i)}
                 id={`tab-${i}`}
                 role='tab'
-                tabIndex={activeTabId === i ? "0" : "-1"}
+                tabIndex={activeTabId === i ? '0' : '-1'}
                 aria-selected={activeTabId === i ? true : false}
                 aria-controls={`panel-${i}`}
               >
                 {job.company}
               </StyledTabButton>
-            );
+            )
           })}
           <StyledHighlight activeTabId={activeTabId} />
         </StyledTabList>
@@ -170,11 +175,16 @@ const Jobs = () => {
         <StyledTabPanels>
           {jobs.map((job, i) => {
             return (
-              <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames='fade'>
+              <CSSTransition
+                key={i}
+                in={activeTabId === i}
+                timeout={250}
+                classNames='fade'
+              >
                 <StyledTabPanel
                   id={`panel-${i}`}
                   role='tabpanel'
-                  tabIndex={activeTabId === i ? "0" : "-1"}
+                  tabIndex={activeTabId === i ? '0' : '-1'}
                   aria-labelledby={`tab-${i}`}
                   aria-hidden={activeTabId !== i}
                   hidden={activeTabId !== i}
@@ -193,19 +203,19 @@ const Jobs = () => {
 
                   <div className='job-points'>
                     <ul>
-                      {job.bulletPoints.map((point) => {
-                        return <li>{point}</li>;
+                      {job.bulletPoints.map(point => {
+                        return <li key={point}>{point}</li>
                       })}
                     </ul>
                   </div>
                 </StyledTabPanel>
               </CSSTransition>
-            );
+            )
           })}
         </StyledTabPanels>
       </div>
     </StyledJobs>
-  );
-};
+  )
+}
 
-export default Jobs;
+export default Jobs

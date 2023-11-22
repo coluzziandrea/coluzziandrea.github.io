@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
-import styled from 'styled-components';
-import sr from '../../utils/sr';
-import Icon from '../icons/icon';
-import { communities } from '../../config';
-import communityImages from '../communityImages';
+import React, { useEffect, useRef } from 'react'
+import styled from 'styled-components'
+import sr from '../../utils/sr'
+import Icon from '../icons/icon'
+import { communities } from '../../config'
+import communityImages from '../communityImages'
 
-const StyledCommunity = styled.section``;
+const StyledCommunity = styled.section``
 
 const StyledCommunityGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
@@ -14,7 +14,7 @@ const StyledCommunityGrid = styled.ul`
     position: relative;
     z-index: 1;
   }
-`;
+`
 
 const StyledCommunityElement = styled.li`
   position: relative;
@@ -299,16 +299,16 @@ const StyledCommunityElement = styled.li`
       }
     }
   }
-`;
+`
 
 const Community = () => {
-  const revealTitle = useRef(null);
-  const revealProjects = useRef([]);
+  const revealTitle = useRef(null)
+  const revealProjects = useRef([])
 
   useEffect(() => {
-    sr(revealTitle.current);
-    revealProjects.current.forEach((ref, i) => sr(ref, i * 100));
-  }, []);
+    sr(revealTitle.current)
+    revealProjects.current.forEach((ref, i) => sr(ref, i * 100))
+  }, [])
 
   return (
     <StyledCommunity id='community'>
@@ -319,8 +319,8 @@ const Community = () => {
           return (
             <StyledCommunityElement
               key={i}
-              ref={(el) => {
-                revealProjects.current[i] = el;
+              ref={el => {
+                revealProjects.current[i] = el
               }}
             >
               <div className='project-content'>
@@ -365,11 +365,11 @@ const Community = () => {
                 </a>
               </div>
             </StyledCommunityElement>
-          );
+          )
         })}
       </StyledCommunityGrid>
     </StyledCommunity>
-  );
-};
+  )
+}
 
-export default Community;
+export default Community

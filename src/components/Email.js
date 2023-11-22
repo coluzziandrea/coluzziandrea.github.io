@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { email } from "../config";
-import Side from "./Side";
+import React from 'react'
+import styled from 'styled-components'
+import { email } from '../config'
+import Side from './Side'
 
 const StyledLinkWrapper = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ const StyledLinkWrapper = styled.div`
   position: relative;
 
   &:after {
-    content: "";
+    content: '';
     display: block;
     width: 1px;
     height: 90px;
@@ -32,7 +32,7 @@ const StyledLinkWrapper = styled.div`
       transform: translateY(-3px);
     }
   }
-`;
+`
 
 const Email = () => (
   <Side orientation='right'>
@@ -40,6 +40,6 @@ const Email = () => (
       <a href={`mailto:${email}`}>{email}</a>
     </StyledLinkWrapper>
   </Side>
-);
+)
 
-export default Email;
+export default Email

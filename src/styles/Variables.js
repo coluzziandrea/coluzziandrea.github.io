@@ -1,9 +1,9 @@
-import { css } from "styled-components";
+import { css } from 'styled-components'
 
 const variables = css`
   :root {
-    --font-sans: "Ubuntu", system-ui, sans-serif;
-    --font-mono: "JetBrains", monospace;
+    --font-sans: 'Ubuntu', system-ui, sans-serif;
+    --font-mono: 'JetBrains', monospace;
 
     --teal-100: #d3f1f3;
     --teal-200: #a6e3e7;
@@ -56,10 +56,11 @@ const variables = css`
 
     --ham-before: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
     --ham-before-active: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
-    --ham-after: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    --ham-after: bottom 0.1s ease-in 0.25s,
+      transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     --ham-after-active: bottom 0.1s ease-out,
       transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
   }
-`;
+`
 
-export default variables;
+export default variables
