@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
-import styled from "styled-components";
-import sr from "../../utils/sr";
-import Icon from "../icons/icon";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { otherProjects } from "../../config";
+import React, { useState, useEffect, useRef } from 'react'
+import styled from 'styled-components'
+import sr from '../../utils/sr'
+import Icon from '../icons/icon'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import { otherProjects } from '../../config'
 
 const StyledProjects = styled.section`
   display: flex;
@@ -39,7 +39,7 @@ const StyledProjects = styled.section`
     ${({ theme }) => theme.mixins.button};
     margin: 80px auto 0;
   }
-`;
+`
 
 const StyledProject = styled.li`
   position: relative;
@@ -121,7 +121,7 @@ const StyledProject = styled.li`
       position: static;
 
       &:before {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         z-index: 0;
@@ -161,24 +161,24 @@ const StyledProject = styled.li`
       }
     }
   }
-`;
+`
 
 const OtherProjects = () => {
-  const [showMore, setShowMore] = useState(false);
-  const revealTitle = useRef(null);
-  const revealProjects = useRef([]);
+  const [showMore, setShowMore] = useState(false)
+  const revealTitle = useRef(null)
+  const revealProjects = useRef([])
 
   useEffect(() => {
-    sr(revealTitle.current);
-    revealProjects.current.forEach((ref, i) => sr(ref, i * 100));
-  }, []);
+    sr(revealTitle.current)
+    revealProjects.current.forEach((ref, i) => sr(ref, i * 100))
+  }, [])
 
-  const GRID_LIMIT = 6;
-  const firstSix = otherProjects.slice(0, GRID_LIMIT);
-  const projectsToShow = showMore ? otherProjects : firstSix;
+  const GRID_LIMIT = 6
+  const firstSix = otherProjects.slice(0, GRID_LIMIT)
+  const projectsToShow = showMore ? otherProjects : firstSix
 
-  const projectInner = (project) => {
-    const mainLink = project.link ? project.link : project.github;
+  const projectInner = project => {
+    const mainLink = project.link ? project.link : project.github
 
     return (
       <div className='project-inner'>
@@ -189,7 +189,12 @@ const OtherProjects = () => {
             </div>
             <div className='project-links'>
               {project.github && (
-                <a href={project.github} aria-label='GitHub Link' target='_blank' rel='noreferrer'>
+                <a
+                  href={project.github}
+                  aria-label='GitHub Link'
+                  target='_blank'
+                  rel='noreferrer'
+                >
                   <Icon name='GitHub' />
                 </a>
               )}
@@ -213,7 +218,10 @@ const OtherProjects = () => {
             </a>
           </h3>
 
-          <div className='project-description' dangerouslySetInnerHTML={{ __html: project.html }} />
+          <div
+            className='project-description'
+            dangerouslySetInnerHTML={{ __html: project.html }}
+          />
         </header>
 
         <footer>
@@ -224,8 +232,8 @@ const OtherProjects = () => {
           </ul>
         </footer>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <StyledProjects>
@@ -243,9 +251,11 @@ const OtherProjects = () => {
               >
                 <StyledProject
                   key={i}
-                  ref={(el) => (revealProjects.current[i] = el)}
+                  ref={el => (revealProjects.current[i] = el)}
                   style={{
-                    transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
+                    transitionDelay: `${
+                      i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0
+                    }ms`
                   }}
                 >
                   {projectInner(project)}
@@ -256,10 +266,10 @@ const OtherProjects = () => {
       </ul>
 
       <button className='more-button' onClick={() => setShowMore(!showMore)}>
-        Show {showMore ? "Less" : "More"}
+        Show {showMore ? 'Less' : 'More'}
       </button>
     </StyledProjects>
-  );
-};
+  )
+}
 
-export default OtherProjects;
+export default OtherProjects

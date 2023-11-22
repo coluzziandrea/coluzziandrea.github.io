@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import styled, { css } from 'styled-components';
-import useScrollDirection from '../hooks/useScrollDirection';
-import { navLinks } from '../config';
-import Logo from './icons/Logo';
-import Menu from './Menu';
-import Icon from './icons/icon';
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import styled, { css } from 'styled-components'
+import useScrollDirection from '../hooks/useScrollDirection'
+import { navLinks } from '../config'
+import Logo from './icons/Logo'
+import Menu from './Menu'
+import Icon from './icons/icon'
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -31,7 +31,7 @@ const StyledHeader = styled.header`
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    ${(props) =>
+    ${props =>
       props.scrollDirection === 'up' &&
       !props.scrolledToTop &&
       css`
@@ -41,7 +41,7 @@ const StyledHeader = styled.header`
         box-shadow: 0 10px 30px -10px var(--yale-900);
       `};
 
-    ${(props) =>
+    ${props =>
       props.scrollDirection === 'down' &&
       !props.scrolledToTop &&
       css`
@@ -50,7 +50,7 @@ const StyledHeader = styled.header`
         box-shadow: 0 10px 30px -10px var(--yale-900);
       `};
   }
-`;
+`
 
 const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -76,7 +76,7 @@ const StyledNav = styled.nav`
       }
     }
   }
-`;
+`
 
 const StyledLinks = styled.div`
   display: flex;
@@ -111,29 +111,29 @@ const StyledLinks = styled.div`
       }
     }
   }
-`;
+`
 
 const Header = () => {
-  const [isMounted, setIsMounted] = useState(false);
-  const scrollDirection = useScrollDirection('down');
-  const [scrolledToTop, setScrolledToTop] = useState(true);
+  const [isMounted, setIsMounted] = useState(false)
+  const scrollDirection = useScrollDirection('down')
+  const [scrolledToTop, setScrolledToTop] = useState(true)
 
   const handleScroll = () => {
-    setScrolledToTop(window.pageYOffset < 50);
-  };
+    setScrolledToTop(window.pageYOffset < 50)
+  }
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setIsMounted(true);
-    }, 100);
+      setIsMounted(true)
+    }, 100)
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-      clearTimeout(timeout);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      clearTimeout(timeout)
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const LogoIcon = (
     <div className='logo' tabIndex='-1'>
@@ -141,7 +141,7 @@ const Header = () => {
         <Logo></Logo>
       </a>
     </div>
-  );
+  )
 
   return (
     <StyledHeader
@@ -187,7 +187,7 @@ const Header = () => {
         </>
       </StyledNav>
     </StyledHeader>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

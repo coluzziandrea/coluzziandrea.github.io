@@ -1,7 +1,7 @@
-import lit from '../assets/community/lit.png';
+import lit from '../assets/community/lit.png'
 
 const communityImages = {
-  lit,
-};
+  lit
+}
 
-export default communityImages;
+export default communityImages

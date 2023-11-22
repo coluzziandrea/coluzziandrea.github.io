@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import Icon from "./icons/icon";
-import { socialMedia } from "../config";
+import React from 'react'
+import styled from 'styled-components'
+import Icon from './icons/icon'
+import { socialMedia } from '../config'
 
 const StyledFooter = styled.footer`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -11,7 +10,7 @@ const StyledFooter = styled.footer`
   min-height: 70px;
   padding: 15px;
   text-align: center;
-`;
+`
 
 const StyledSocialLinks = styled.div`
   display: none;
@@ -38,7 +37,7 @@ const StyledSocialLinks = styled.div`
       }
     }
   }
-`;
+`
 
 const StyledCredit = styled.div`
   color: var(--light-ghost);
@@ -49,7 +48,7 @@ const StyledCredit = styled.div`
   a {
     padding: 10px;
   }
-`;
+`
 
 const Footer = () => {
   return (
@@ -72,7 +71,7 @@ const Footer = () => {
         </a>
       </StyledCredit>
     </StyledFooter>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -1,7 +1,12 @@
-import React from "react";
+import React from 'react'
 
 const Logo = () => (
-  <svg xmlns='http://www.w3.org/2000/svg' width='103' height='42' viewBox='0 0 102 42'>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='103'
+    height='42'
+    viewBox='0 0 102 42'
+  >
     <defs>
       <clipPath id='clip1'>
         <path d='M7.227 0h19.691v26.59H7.227zm0 0'></path>
@@ -43,6 +48,6 @@ const Logo = () => (
       ></path>
     </g>
   </svg>
-);
+)
 
-export default Logo;
+export default Logo

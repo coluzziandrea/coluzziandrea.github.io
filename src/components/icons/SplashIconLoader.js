@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const SplashIconLoader = () => (
   <svg
@@ -79,6 +79,6 @@ const SplashIconLoader = () => (
       </g>
     </g>
   </svg>
-);
+)
 
-export default SplashIconLoader;
+export default SplashIconLoader

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import anime from "animejs";
-import styled from "styled-components";
-import SplashIconLoader from "./icons/SplashIconLoader";
+import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
+import anime from 'animejs'
+import styled from 'styled-components'
+import SplashIconLoader from './icons/SplashIconLoader'
 
 const StyledLoader = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -20,7 +20,7 @@ const StyledLoader = styled.div`
     width: max-content;
     max-width: 200px;
     transition: var(--transition);
-    opacity: ${(props) => (props.isMounted ? 1 : 0)};
+    opacity: ${props => (props.isMounted ? 1 : 0)};
     svg {
       display: block;
       width: 100%;
@@ -33,52 +33,52 @@ const StyledLoader = styled.div`
       }
     }
   }
-`;
+`
 
 const Loader = ({ finishLoading }) => {
-  const [isMounted, setIsMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false)
 
   const animate = () => {
     const loader = anime.timeline({
-      complete: () => finishLoading(),
-    });
+      complete: () => finishLoading()
+    })
 
     loader
       .add({
-        targets: "#logo path",
+        targets: '#logo path',
         delay: 300,
         duration: 1500,
-        easing: "easeInOutQuart",
-        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutQuart',
+        strokeDashoffset: [anime.setDashoffset, 0]
       })
       .add({
-        targets: "#logo #B",
+        targets: '#logo #B',
         duration: 700,
-        easing: "easeInOutQuart",
-        opacity: 1,
+        easing: 'easeInOutQuart',
+        opacity: 1
       })
       .add({
-        targets: "#logo",
+        targets: '#logo',
         delay: 500,
         duration: 300,
-        easing: "easeInOutQuart",
+        easing: 'easeInOutQuart',
         opacity: 0,
-        scale: 0.1,
+        scale: 0.1
       })
       .add({
-        targets: ".loader",
+        targets: '.loader',
         duration: 200,
-        easing: "easeInOutQuart",
+        easing: 'easeInOutQuart',
         opacity: 0,
-        zIndex: -1,
-      });
-  };
+        zIndex: -1
+      })
+  }
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsMounted(true), 10);
-    animate();
-    return () => clearTimeout(timeout);
-  }, []);
+    const timeout = setTimeout(() => setIsMounted(true), 10)
+    animate()
+    return () => clearTimeout(timeout)
+  }, [])
 
   return (
     <StyledLoader className='loader' isMounted={isMounted}>
@@ -86,11 +86,11 @@ const Loader = ({ finishLoading }) => {
         <SplashIconLoader />
       </div>
     </StyledLoader>
-  );
-};
+  )
+}
 
 Loader.propTypes = {
-  finishLoading: PropTypes.func.isRequired,
-};
+  finishLoading: PropTypes.func.isRequired
+}
 
-export default Loader;
+export default Loader

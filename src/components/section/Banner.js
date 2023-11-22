@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 const StyledSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -44,27 +44,28 @@ const StyledSection = styled.section`
   .short-about {
     margin-top: 30px;
   }
-`;
+`
 
 const Banner = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsMounted(true), 1000); // 1 sec timeout
-    return () => clearTimeout(timeout);
-  }, []);
+    const timeout = setTimeout(() => setIsMounted(true), 1000) // 1 sec timeout
+    return () => clearTimeout(timeout)
+  }, [])
 
-  const one = <h1>Hello, my name is</h1>;
-  const two = <h2 className='big-heading'>Andrea Coluzzi</h2>;
-  const three = <h3 className='big-heading'>I am a Web Developer.</h3>;
+  const one = <h1>Hello, my name is</h1>
+  const two = <h2 className='big-heading'>Andrea Coluzzi</h2>
+  const three = <h3 className='big-heading'>I am a Web Developer.</h3>
   const four = (
     <>
       <p className='short-about'>
-        I am a Software Engineer who is passionate about techonology and problem solving. I am
-        experienced in many software languages, methods and techniques.
+        I am a Software Engineer who is passionate about techonology and problem
+        solving. I am experienced in many software languages, methods and
+        techniques.
       </p>
     </>
-  );
+  )
   const five = (
     <a
       className='email-link'
@@ -74,9 +75,9 @@ const Banner = () => {
     >
       Read My Blog
     </a>
-  );
+  )
 
-  const items = [one, two, three, four, five];
+  const items = [one, two, three, four, five]
 
   return (
     <StyledSection>
@@ -89,7 +90,7 @@ const Banner = () => {
           ))}
       </TransitionGroup>
     </StyledSection>
-  );
-};
+  )
+}
 
-export default Banner;
+export default Banner

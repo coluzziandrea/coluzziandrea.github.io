@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+import { css } from 'styled-components'
 
 // https://reactcommunity.org/react-transition-group/css-transition
 
@@ -7,26 +7,34 @@ const TransitionStyles = css`
   .fadeup-enter {
     opacity: 0.01;
     transform: translateY(20px);
-    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+    transition:
+      opacity 300ms var(--easing),
+      transform 300ms var(--easing);
   }
 
   .fadeup-enter-active {
     opacity: 1;
     transform: translateY(0px);
-    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+    transition:
+      opacity 300ms var(--easing),
+      transform 300ms var(--easing);
   }
 
   /* Fade down */
   .fadedown-enter {
     opacity: 0.01;
     transform: translateY(-20px);
-    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+    transition:
+      opacity 300ms var(--easing),
+      transform 300ms var(--easing);
   }
 
   .fadedown-enter-active {
     opacity: 1;
     transform: translateY(0px);
-    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+    transition:
+      opacity 300ms var(--easing),
+      transform 300ms var(--easing);
   }
 
   /* Fade */
@@ -44,6 +52,6 @@ const TransitionStyles = css`
     opacity: 0;
     transition: opacity 300ms var(--easing);
   }
-`;
+`
 
-export default TransitionStyles;
+export default TransitionStyles

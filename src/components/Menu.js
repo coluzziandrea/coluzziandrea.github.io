@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-import styled from 'styled-components';
-import { Helmet } from 'react-helmet';
-import useOnClickOutside from '../hooks/useOnClickOutside';
-import { navLinks } from '../config';
-import Icon from './icons/icon';
+import React, { useState, useEffect, useRef } from 'react'
+import styled from 'styled-components'
+import { Helmet } from 'react-helmet'
+import useOnClickOutside from '../hooks/useOnClickOutside'
+import { navLinks } from '../config'
+import Icon from './icons/icon'
 
 const StyledMenu = styled.div`
   display: none;
@@ -11,7 +11,7 @@ const StyledMenu = styled.div`
   @media (max-width: 768px) {
     display: block;
   }
-`;
+`
 
 const StyledHamburgerButton = styled.button`
   display: none;
@@ -48,10 +48,10 @@ const StyledHamburgerButton = styled.button`
     background-color: var(--teal-400);
     transition-duration: 0.22s;
     transition-property: transform;
-    transition-delay: ${(props) => (props.menuOpen ? `0.12s` : `0s`)};
-    transform: rotate(${(props) => (props.menuOpen ? `225deg` : `0deg`)});
+    transition-delay: ${props => (props.menuOpen ? `0.12s` : `0s`)};
+    transform: rotate(${props => (props.menuOpen ? `225deg` : `0deg`)});
     transition-timing-function: cubic-bezier(
-      ${(props) =>
+      ${props =>
         props.menuOpen ? `0.215, 0.61, 0.355, 1` : `0.55, 0.055, 0.675, 0.19`}
     );
     &:before,
@@ -70,21 +70,21 @@ const StyledHamburgerButton = styled.button`
       transition-property: transform;
     }
     &:before {
-      width: ${(props) => (props.menuOpen ? `100%` : `120%`)};
-      top: ${(props) => (props.menuOpen ? `0` : `-10px`)};
-      opacity: ${(props) => (props.menuOpen ? 0 : 1)};
+      width: ${props => (props.menuOpen ? `100%` : `120%`)};
+      top: ${props => (props.menuOpen ? `0` : `-10px`)};
+      opacity: ${props => (props.menuOpen ? 0 : 1)};
       transition: ${({ menuOpen }) =>
         menuOpen ? 'var(--ham-before-active)' : 'var(--ham-before)'};
     }
     &:after {
-      width: ${(props) => (props.menuOpen ? `100%` : `80%`)};
-      bottom: ${(props) => (props.menuOpen ? `0` : `-10px`)};
-      transform: rotate(${(props) => (props.menuOpen ? `-90deg` : `0`)});
+      width: ${props => (props.menuOpen ? `100%` : `80%`)};
+      bottom: ${props => (props.menuOpen ? `0` : `-10px`)};
+      transform: rotate(${props => (props.menuOpen ? `-90deg` : `0`)});
       transition: ${({ menuOpen }) =>
         menuOpen ? 'var(--ham-after-active)' : 'var(--ham-after)'};
     }
   }
-`;
+`
 const StyledSidebar = styled.aside`
   display: none;
 
@@ -101,8 +101,8 @@ const StyledSidebar = styled.aside`
     background-color: var(--yale-700);
     box-shadow: -10px 0px 30px -15px var(--yale-900);
     z-index: 9;
-    transform: translateX(${(props) => (props.menuOpen ? 0 : 100)}vw);
-    visibility: ${(props) => (props.menuOpen ? 'visible' : 'hidden')};
+    transform: translateX(${props => (props.menuOpen ? 0 : 100)}vw);
+    visibility: ${props => (props.menuOpen ? 'visible' : 'hidden')};
     transition: var(--transition);
   }
 
@@ -147,48 +147,48 @@ const StyledSidebar = styled.aside`
       }
     }
   }
-`;
+`
 
 const Menu = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
 
-  const wrapperRef = useRef();
-  const buttonRef = useRef(null);
-  const navRef = useRef(null);
+  const wrapperRef = useRef()
+  const buttonRef = useRef(null)
+  const navRef = useRef(null)
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => setMenuOpen(!menuOpen)
 
-  useOnClickOutside(wrapperRef, () => setMenuOpen(false));
+  useOnClickOutside(wrapperRef, () => setMenuOpen(false))
 
-  const onKeyDown = (e) => {
+  const onKeyDown = e => {
     switch (e.key) {
       case 'Escape':
       case 'Esc': {
-        setMenuOpen(false);
-        break;
+        setMenuOpen(false)
+        break
       }
 
       default: {
-        break;
+        break
       }
     }
-  };
+  }
 
-  const onResize = (e) => {
+  const onResize = e => {
     if (e.currentTarget.innerWidth > 768) {
-      setMenuOpen(false);
+      setMenuOpen(false)
     }
-  };
+  }
 
   useEffect(() => {
-    document.addEventListener('keydown', onKeyDown);
-    window.addEventListener('resize', onResize);
+    document.addEventListener('keydown', onKeyDown)
+    window.addEventListener('resize', onResize)
 
     return () => {
-      document.removeEventListener('keydown', onKeyDown);
-      window.removeEventListener('resize', onResize);
-    };
-  }, []);
+      document.removeEventListener('keydown', onKeyDown)
+      window.removeEventListener('resize', onResize)
+    }
+  }, [])
 
   return (
     <StyledMenu>
@@ -230,7 +230,7 @@ const Menu = () => {
         </StyledSidebar>
       </div>
     </StyledMenu>
-  );
-};
+  )
+}
 
-export default Menu;
+export default Menu
