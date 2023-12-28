@@ -1,37 +1,46 @@
 import React from 'react'
-import IconGitHub from './github'
-import IconLinkedin from './linkedin'
-import IconTwitter from './twitter'
-import IconExternal from './external'
-import IconFolder from './folder'
-import IconEmail from './Email'
-import IconProject from './Project'
-import IconProfile from './Profile'
-import IconJob from './Job'
-import CommunityIcon from './Community'
+import { FaThreads } from 'react-icons/fa6'
+import { FaGithub } from 'react-icons/fa'
+import { FaLinkedin } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
+import { FaExternalLinkAlt } from 'react-icons/fa'
+import { FaYoutube } from 'react-icons/fa'
+import { FaHashnode } from 'react-icons/fa6'
+import { FaDev } from 'react-icons/fa'
+import { FaTwitch } from 'react-icons/fa'
+import { FaUser } from 'react-icons/fa'
+import { MdOutlineWork } from 'react-icons/md'
+import { IoPeople } from 'react-icons/io5'
+import { GrProjects } from 'react-icons/gr'
 
 const Icon = ({ name }) => {
   switch (name) {
-    case 'Folder':
-      return <IconFolder />
     case 'GitHub':
-      return <IconGitHub />
+      return <FaGithub />
+    case 'Threads':
+      return <FaThreads />
     case 'Linkedin':
-      return <IconLinkedin />
+      return <FaLinkedin />
     case 'Twitter':
-      return <IconTwitter />
-    case 'Contact':
-      return <IconEmail />
+      return <FaXTwitter />
+    case 'YouTube':
+      return <FaYoutube />
+    case 'Twitch':
+      return <FaTwitch />
+    case 'DEV':
+      return <FaDev />
+    case 'Hashnode':
+      return <FaHashnode />
     case 'Projects':
-      return <IconProject />
+      return <GrProjects />
     case 'About':
-      return <IconProfile />
+      return <FaUser />
     case 'Experience':
-      return <IconJob />
+      return <MdOutlineWork />
     case 'Community':
-      return <CommunityIcon />
+      return <IoPeople />
     default:
-      return <IconExternal />
+      return <FaExternalLinkAlt />
   }
 }
 

@@ -1,13 +1,12 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import sr from '../../utils/sr'
-import Icon from '../icons/icon'
-import { communities } from '../../config'
-import communityImages from '../communityImages'
+import sr from '../utils/sr'
+import Icon from '../components/icons/icon'
+import projectImages from '../components/projectImages'
 
-const StyledCommunity = styled.section``
+const StyledProjects = styled.section``
 
-const StyledCommunityGrid = styled.ul`
+const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
 
   a {
@@ -16,7 +15,7 @@ const StyledCommunityGrid = styled.ul`
   }
 `
 
-const StyledCommunityElement = styled.li`
+const StyledProject = styled.li`
   position: relative;
   display: grid;
   grid-gap: 10px;
@@ -301,9 +300,21 @@ const StyledCommunityElement = styled.li`
   }
 `
 
-const Community = () => {
+const Projects = () => {
   const revealTitle = useRef(null)
   const revealProjects = useRef([])
+
+  const projects = [
+    {
+      title: 'Dietisy',
+      image: 'dietisy',
+      category: 'Mobile Application',
+      html: 'Android Application built for people who want to track their diet progresses. <br>Dietisy is an application that allows you to constantly monitor your diet progress by monitoring your weight, body measurements and height.',
+      link: 'https://play.google.com/store/apps/details?id=com.andreacoluzzi.dietisy',
+      github: 'https://github.com/coluzziandrea/Dietisy',
+      techStack: ['Android', 'Java', 'MVVM']
+    }
+  ]
 
   useEffect(() => {
     sr(revealTitle.current)
@@ -311,13 +322,13 @@ const Community = () => {
   }, [])
 
   return (
-    <StyledCommunity id='community'>
-      <h2 className='section-heading'>Community</h2>
+    <StyledProjects id='projects'>
+      <h2 className='section-heading'>Projects</h2>
 
-      <StyledCommunityGrid>
-        {communities.map((community, i) => {
+      <StyledProjectsGrid>
+        {projects.map((project, i) => {
           return (
-            <StyledCommunityElement
+            <StyledProject
               key={i}
               ref={el => {
                 revealProjects.current[i] = el
@@ -325,28 +336,28 @@ const Community = () => {
             >
               <div className='project-content'>
                 <div>
-                  <p className='project-overline'>{community.category}</p>
+                  <p className='project-overline'>{project.category}</p>
                   <h3 className='project-title'>
-                    <a href={community.link}>{community.title}</a>
+                    <a href={project.link}>{project.title}</a>
                   </h3>
 
                   <div
                     className='project-description'
-                    dangerouslySetInnerHTML={{ __html: community.html }}
+                    dangerouslySetInnerHTML={{ __html: project.html }}
                   ></div>
 
                   <ul className='project-tech-list'>
-                    {community.tags.map((tech, i) => (
+                    {project.techStack.map((tech, i) => (
                       <li key={i}>{tech}</li>
                     ))}
                   </ul>
 
                   <div className='project-links'>
-                    <a href={community.github} aria-label='GitHub Link'>
+                    <a href={project.github} aria-label='GitHub Link'>
                       <Icon name='GitHub' />
                     </a>
                     <a
-                      href={community.link}
+                      href={project.link}
                       aria-label='External Link'
                       className='external'
                     >
@@ -356,20 +367,20 @@ const Community = () => {
                 </div>
               </div>
               <div className='project-image'>
-                <a href={community.link}>
+                <a href={project.link}>
                   <img
-                    src={communityImages[community.image]}
-                    alt={community.image}
+                    src={projectImages[project.image]}
+                    alt={project.image}
                     className='img'
                   />
                 </a>
               </div>
-            </StyledCommunityElement>
+            </StyledProject>
           )
         })}
-      </StyledCommunityGrid>
-    </StyledCommunity>
+      </StyledProjectsGrid>
+    </StyledProjects>
   )
 }
 
-export default Community
+export default Projects

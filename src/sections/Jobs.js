@@ -2,9 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { CSSTransition } from 'react-transition-group'
 
-import sr from '../../utils/sr'
-
-import { jobs } from '../../config'
+import sr from '../utils/sr'
 
 const StyledJobs = styled.section`
   max-width: 900px;
@@ -143,6 +141,63 @@ const StyledTabPanel = styled.div`
 const Jobs = () => {
   const revealContainer = useRef(null)
   const [activeTabId, setActiveTabId] = useState(0)
+
+  const jobs = [
+    {
+      title: 'Software Engineer',
+      company: 'Klarna Italy',
+      location: 'Milano (MI), Italy',
+      range: 'Feb 2023 - Present',
+      url: 'https://www.klarna.com/',
+      bulletPoints: [
+        'Designing & Developing Digital Purchase solutions for Klarna App users.'
+      ]
+    },
+    {
+      title: 'Software Engineer',
+      company: 'Targa Telematics',
+      location: 'Quinto di Treviso (TV), Italy',
+      range: 'Apr 2022 - Feb 2023',
+      url: 'https://www.targatelematics.com/',
+      bulletPoints: [
+        'Designing & Developing Fleet Management solutions for Automotive Business customers. Applying IoT to the automotive sector.',
+        "Building a microservices based architecture to manage connected vehicle's data and delivering our customers the best solution for their business needs.",
+        'Designing & Implementing professional UX for quality software solution'
+      ]
+    },
+    {
+      title: 'Software Engineer',
+      company: 'Marini Impianti Industriali',
+      location: 'Cisterna di Latina (LT), Italy',
+      range: 'Feb 2018 - Apr 2022',
+      url: 'https://www.mariniimpianti.it/',
+      bulletPoints: [
+        'Analysis, designing and implementation of software solutions for diagnostic and maintenance of Railway Systems, main customer: Rete Ferroviaria Italiana (RFI).',
+        'Designing & Implementing multi-module software system to handle real-time data.'
+      ]
+    },
+    {
+      title: 'Software Developer',
+      company: 'Cesare Fiorucci',
+      location: 'Pomezia (RM), Italy',
+      range: 'Aug 2015 - Mar 2016',
+      url: 'https://fioruccisalumi.it/',
+      bulletPoints: [
+        'Consultancy on behalf of MiWare S.r.l.',
+        'Resolution of tasks on internal management application.'
+      ]
+    },
+    {
+      title: 'Software Developer',
+      company: 'MiWare Sistemi',
+      location: 'Aprilia (LT), Italy',
+      range: 'Jul 2015 - Apr 2016',
+      url: 'https://it.kompass.com/c/miware-sistemi-s-r-l/it1296625/',
+      bulletPoints: [
+        'Design and development of software systems for industrial automation.'
+      ]
+    }
+  ]
 
   useEffect(() => {
     sr(revealContainer.current)

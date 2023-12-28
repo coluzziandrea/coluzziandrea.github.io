@@ -1,13 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from './components/Layout'
-import Banner from './components/section/Banner'
-import About from './components/section/About'
-import Jobs from './components/section/Jobs'
-import Projects from './components/section/Projects'
-import Community from './components/section/Community'
-import OtherProjects from './components/section/OtherProjects'
-import Contacts from './components/section/Contacts'
+import Banner from './sections/Banner'
+import About from './sections/About'
+import Jobs from './sections/Jobs'
+import Projects from './sections/Projects'
+import Community from './sections/Community'
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
@@ -22,8 +20,6 @@ function App() {
         <Jobs></Jobs>
         <Community></Community>
         <Projects></Projects>
-        <OtherProjects></OtherProjects>
-        <Contacts></Contacts>
       </StyledMainContainer>
     </Layout>
   )

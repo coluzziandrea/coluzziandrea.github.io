@@ -1,12 +1,10 @@
 import { css } from 'styled-components'
 
-import UbuntuRegularttf from '../fonts/Ubuntu/Ubuntu-Regular.ttf'
-import UbuntuMediumttf from '../fonts/Ubuntu/Ubuntu-Medium.ttf'
-import UbuntuBoldttf from '../fonts/Ubuntu/Ubuntu-Bold.ttf'
+import MonolisaRegularttf from '../fonts/MonoLisa-Basic-2.012/ttf/MonoLisa-Regular.ttf'
+import MonolisaBoldttf from '../fonts/MonoLisa-Basic-2.012/ttf/MonoLisa-Bold.ttf'
 
-import UbuntuRegularItalicttf from '../fonts/Ubuntu/Ubuntu-Italic.ttf'
-import UbuntuMediumItalicttf from '../fonts/Ubuntu/Ubuntu-MediumItalic.ttf'
-import UbuntuBoldItalicttf from '../fonts/Ubuntu/Ubuntu-BoldItalic.ttf'
+import MonolisaRegularItalicttf from '../fonts/MonoLisa-Basic-2.012/ttf/MonoLisa-RegularItalic.ttf'
+import MonolisaBoldItalicttf from '../fonts/MonoLisa-Basic-2.012/ttf/MonoLisa-BoldItalic.ttf'
 
 import JetBrainsRegularttf from '../fonts/JetBrains/JetBrainsMono-Regular.ttf'
 import JetBrainsMediumttf from '../fonts/JetBrains/JetBrainsMono-Medium.ttf'
@@ -16,16 +14,16 @@ import JetBrainsRegularItalicttf from '../fonts/JetBrains/JetBrainsMono-Italic.t
 import JetBrainsMediumItalicttf from '../fonts/JetBrains/JetBrainsMono-MediumItalic.ttf'
 import JetBrainsBoldItalicttf from '../fonts/JetBrains/JetBrainsMono-BoldItalic.ttf'
 
-const UbuntuNormalWeights = {
-  400: UbuntuRegularttf,
-  500: UbuntuMediumttf,
-  600: UbuntuBoldttf
+const MonolisaNormalWeights = {
+  400: MonolisaRegularttf,
+  500: MonolisaRegularttf,
+  600: MonolisaBoldttf
 }
 
-const UbuntuItalicWeights = {
-  400: UbuntuRegularItalicttf,
-  500: UbuntuMediumItalicttf,
-  600: UbuntuBoldItalicttf
+const MonolisaItalicWeights = {
+  400: MonolisaRegularItalicttf,
+  500: MonolisaRegularItalicttf,
+  600: MonolisaBoldItalicttf
 }
 
 const JetBrainsNormalWeights = {
@@ -40,10 +38,10 @@ const JetBrainsItalicWeights = {
   600: JetBrainsBoldItalicttf
 }
 
-const Ubuntu = {
-  name: 'Ubuntu',
-  normal: UbuntuNormalWeights,
-  italic: UbuntuItalicWeights
+const Monolisa = {
+  name: 'Monolisa',
+  normal: MonolisaNormalWeights,
+  italic: MonolisaItalicWeights
 }
 
 const JetBrains = {
@@ -72,14 +70,14 @@ const createFontFaces = (family, style = 'normal') => {
   return styles
 }
 
-const UbuntuNormal = createFontFaces(Ubuntu)
-const UbuntuItalic = createFontFaces(Ubuntu, 'italic')
+const MonolisaNormal = createFontFaces(Monolisa)
+const MonolisaItalic = createFontFaces(Monolisa, 'italic')
 
 const JetBrainsNormal = createFontFaces(JetBrains)
 const JetBrainsItalic = createFontFaces(JetBrains, 'italic')
 
 const Fonts = css`
-  ${UbuntuNormal + UbuntuItalic + JetBrainsNormal + JetBrainsItalic}
+  ${MonolisaNormal + MonolisaItalic + JetBrainsNormal + JetBrainsItalic}
 `
 
 export default Fonts

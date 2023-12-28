@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
-import { skills } from '../../config'
-import sr from '../../utils/sr'
-import photo from '../../assets/images/me.jpg'
+import sr from '../utils/sr'
+import photo from '../assets/images/me.jpg'
 
 const StyledAbout = styled.section`
   max-width: 900px;
@@ -121,6 +120,16 @@ const StyledPicture = styled.div`
 
 const About = () => {
   const revealContainer = useRef(null)
+
+  const skills = [
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Angular',
+    'Android',
+    'Flutter',
+    'Node.js'
+  ]
 
   useEffect(() => {
     sr(revealContainer.current)

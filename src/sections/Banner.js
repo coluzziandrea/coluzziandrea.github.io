@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import resume from '../../assets/docs/resume.pdf'
+import resume from '../assets/docs/resume.pdf'
 
 const StyledSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -37,7 +37,7 @@ const StyledSection = styled.section`
     max-width: 540px;
   }
 
-  .email-link {
+  .main-link {
     ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
   }
@@ -69,7 +69,7 @@ const Banner = () => {
   )
   const five = (
     <a
-      className='email-link'
+      className='main-link'
       href={resume}
       target='_blank'
       rel='noopener noreferrer'

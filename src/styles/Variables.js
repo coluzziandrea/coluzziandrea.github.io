@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 
 const variables = css`
   :root {
-    --font-sans: 'Ubuntu', system-ui, sans-serif;
+    --font-sans: 'MonoLisa', system-ui, sans-serif;
     --font-mono: 'JetBrains', monospace;
 
     --teal-100: #d3f1f3;

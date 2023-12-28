@@ -1,13 +1,12 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import sr from '../../utils/sr'
-import Icon from '../icons/icon'
-import { projects } from '../../config'
-import projectImages from '../projectImages'
+import sr from '../utils/sr'
+import Icon from '../components/icons/icon'
+import communityImages from '../components/communityImages'
 
-const StyledProjects = styled.section``
+const StyledCommunity = styled.section``
 
-const StyledProjectsGrid = styled.ul`
+const StyledCommunityGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
 
   a {
@@ -16,7 +15,7 @@ const StyledProjectsGrid = styled.ul`
   }
 `
 
-const StyledProject = styled.li`
+const StyledCommunityElement = styled.li`
   position: relative;
   display: grid;
   grid-gap: 10px;
@@ -301,9 +300,21 @@ const StyledProject = styled.li`
   }
 `
 
-const Projects = () => {
+const Community = () => {
   const revealTitle = useRef(null)
   const revealProjects = useRef([])
+
+  const communities = [
+    {
+      title: 'Latina In Tech',
+      category: 'Local IT Community',
+      image: 'lit',
+      html: 'In Jan 2023 I founded Latina In Tech (LiT), which is a tech community based in Latina, Italy, our purpose is to create a network of local IT professionals. Follow us on our website!',
+      link: 'https://latina-in-tech.github.io/',
+      github: 'https://github.com/latina-in-tech',
+      tags: ['Community', 'Meetup', 'Latina', 'Local Community']
+    }
+  ]
 
   useEffect(() => {
     sr(revealTitle.current)
@@ -311,13 +322,13 @@ const Projects = () => {
   }, [])
 
   return (
-    <StyledProjects id='projects'>
-      <h2 className='section-heading'>Featured Projects</h2>
+    <StyledCommunity id='community'>
+      <h2 className='section-heading'>Community</h2>
 
-      <StyledProjectsGrid>
-        {projects.map((project, i) => {
+      <StyledCommunityGrid>
+        {communities.map((community, i) => {
           return (
-            <StyledProject
+            <StyledCommunityElement
               key={i}
               ref={el => {
                 revealProjects.current[i] = el
@@ -325,28 +336,28 @@ const Projects = () => {
             >
               <div className='project-content'>
                 <div>
-                  <p className='project-overline'>{project.category}</p>
+                  <p className='project-overline'>{community.category}</p>
                   <h3 className='project-title'>
-                    <a href={project.link}>{project.title}</a>
+                    <a href={community.link}>{community.title}</a>
                   </h3>
 
                   <div
                     className='project-description'
-                    dangerouslySetInnerHTML={{ __html: project.html }}
+                    dangerouslySetInnerHTML={{ __html: community.html }}
                   ></div>
 
                   <ul className='project-tech-list'>
-                    {project.techStack.map((tech, i) => (
+                    {community.tags.map((tech, i) => (
                       <li key={i}>{tech}</li>
                     ))}
                   </ul>
 
                   <div className='project-links'>
-                    <a href={project.github} aria-label='GitHub Link'>
+                    <a href={community.github} aria-label='GitHub Link'>
                       <Icon name='GitHub' />
                     </a>
                     <a
-                      href={project.link}
+                      href={community.link}
                       aria-label='External Link'
                       className='external'
                     >
@@ -356,20 +367,20 @@ const Projects = () => {
                 </div>
               </div>
               <div className='project-image'>
-                <a href={project.link}>
+                <a href={community.link}>
                   <img
-                    src={projectImages[project.image]}
-                    alt={project.image}
+                    src={communityImages[community.image]}
+                    alt={community.image}
                     className='img'
                   />
                 </a>
               </div>
-            </StyledProject>
+            </StyledCommunityElement>
           )
         })}
-      </StyledProjectsGrid>
-    </StyledProjects>
+      </StyledCommunityGrid>
+    </StyledCommunity>
   )
 }
 
-export default Projects
+export default Community

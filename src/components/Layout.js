@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../styles/GlobalStyle'
 import theme from '../styles/Theme'
-import Loader from './SplashLoader'
 import Header from './Header'
 import Sidebar from './Sidebar'
-import Email from './Email'
 import Footer from './Footer'
 
 const StyledContent = styled.div`
@@ -16,44 +14,20 @@ const StyledContent = styled.div`
 `
 
 const Layout = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    if (isLoading) {
-      return
-    }
-
-    setTimeout(() => {
-      const el = document.getElementById('root')
-      if (el) {
-        el.scrollIntoView()
-        el.focus()
-      }
-    }, 0)
-  }, [isLoading])
-
   return (
-    <>
-      <div id='root'>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle />
-
-          {isLoading ? (
-            <Loader finishLoading={() => setIsLoading(false)} />
-          ) : (
-            <StyledContent>
-              <Header></Header>
-              <Sidebar></Sidebar>
-              <Email></Email>
-              <div id='content'>
-                {children}
-                <Footer></Footer>
-              </div>
-            </StyledContent>
-          )}
-        </ThemeProvider>
-      </div>
-    </>
+    <div id='root'>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <StyledContent>
+          <Header></Header>
+          <Sidebar></Sidebar>
+          <div id='content'>
+            {children}
+            <Footer></Footer>
+          </div>
+        </StyledContent>
+      </ThemeProvider>
+    </div>
   )
 }
 
