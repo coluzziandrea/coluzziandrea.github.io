@@ -22,7 +22,7 @@ module.exports = {
     },
     {
       name: 'YouTube',
-      url: 'https://www.youtube.com/@coluzziandrea893'
+      url: 'https://www.youtube.com/@andreacoluzzidev'
     },
     {
       name: 'Threads',
