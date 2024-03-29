@@ -1,70 +1,36 @@
-# coluzziandrea.com
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-![Coluzzi Andrea Logo](/public/logo_white_background.jpg)
+## Getting Started
 
-<p align="center">
-  <h1 align="center">Full Stack Software Engineer</h1>
+First, run the development server:
 
-  <p align="center">
-    Coluzzi Andrea's personal website, built with React and GitHub Pages. Site URL: 
-    <a href="https://www.coluzziandrea.com/">coluzziandrea.com</a>
-    <br />
-    <br />
-    <a href="https://github.com/coluzziandrea">About Me</a>
-  </p>
-</p>
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-[![GitHub issues](https://img.shields.io/github/issues/coluzziandrea/coluzziandrea.github.io?color=31afb7&style=for-the-badge)](https://github.com/coluzziandrea/coluzziandrea.github.io/issues)
-[![GitHub license](https://img.shields.io/github/license/coluzziandrea/coluzziandrea.github.io?color=31afb7&style=for-the-badge)](https://github.com/coluzziandrea/coluzziandrea.github.io/blob/master/LICENSE.MD)
-[![Twitter Follow](https://img.shields.io/twitter/follow/acidevil94?color=31afb7&logo=twitter&logoColor=ffffff&style=for-the-badge)](https://twitter.com/acidevil94)
-[![Node Version](https://img.shields.io/static/v1?label=Node&message=v16.16.0&color=31afb7&style=for-the-badge)](https://nodejs.org)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Table of Contents
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- [Tech Stack](#tech-stack-)
-- [Color Codes](#color-codes-)
-- [Sharing](#sharing-)
-- [Prerequisites](#prerequisites-)
-- [Run Locally](#run-locally-)
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Tech Stack
+## Learn More
 
-- React
-- Styled Components
-- HTML5 & CSS3
+To learn more about Next.js, take a look at the following resources:
 
-## Color Codes
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-| Color           | Hex                                                        |
-| --------------- | ---------------------------------------------------------- |
-| Primary color   | ![#31afb7](https://img.shields.io/badge/-%2331afb7-31afb7) |
-| Secondary color | ![#084887](https://img.shields.io/badge/-%23084887-084887) |
-| White color     | ![#f7f5fb](https://img.shields.io/badge/-%23f7f5fb-f7f5fb) |
-| Gray color      | ![#31afb7](https://img.shields.io/badge/-%23495057-495057) |
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Sharing
+## Deploy on Vercel
 
-Project is open source. Feel free to make your own version. Mark star ⭐ if you like the project.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Prerequisites
-
-You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your PC. You should also own a GitHub account.
-
-## Run Locally
-
-1. To Get Started, Fork this repository to your GitHub account:
-2. Clone the forked repo from your account using:
-
-   ```bash
-     git clone https://github.com/<your-username>/coluzziandrea.github.io.git
-   ```
-
-3. After editing run the following bash commands:
-
-   ```bash
-   cd coluzziandrea.github.io
-   npm install
-   npm start
-   ```
-
-4. Congrats your site is up and running.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
