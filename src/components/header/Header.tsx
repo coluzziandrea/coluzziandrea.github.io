@@ -4,6 +4,7 @@ import Image from 'next/image'
 import logoWhite from '../../../public/assets/logo_white.png'
 import logoBlack from '../../../public/assets/logo_black.png'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { IoMdClose } from 'react-icons/io'
 import { useScrollDirection } from '@/hooks/useScrollDirection'
 import { useEffect, useRef, useState } from 'react'
 
@@ -52,11 +53,15 @@ export const Header = () => {
           />
         </div>
         <div className="block md:hidden" onClick={() => setShowMenu(!showMenu)}>
-          <GiHamburgerMenu className="w-6 h-6" />
+          {showMenu ? (
+            <IoMdClose className="animate-in spin-in w-6 h-6" />
+          ) : (
+            <GiHamburgerMenu className="animate-out spin-out w-6 h-6" />
+          )}
         </div>
 
         {showMenu && (
-          <div className="absolute left-0 top-20 z-10 w-screen animate-fadeslidein bg-white text-black dark:bg-main-900 dark:text-white">
+          <div className="absolute left-0 top-20 z-10 w-screen animate-in slide-in-from-top bg-white text-black dark:bg-main-900 dark:text-white">
             <div className=""></div>
             <p>Sono il menu!</p>
           </div>
