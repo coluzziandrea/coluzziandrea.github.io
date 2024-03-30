@@ -9,9 +9,9 @@ export default function Home() {
 
   return (
     <div>
-      <main className="flex flex-col h-screen">
+      <main className="flex flex-col h-screen w-screen">
         <Header showMenu={showMenu} setShowMenu={setShowMenu} />
-        <section className={`${showMenu && 'blur-sm'}`}>
+        <section className={`mt-2 ${showMenu && 'blur-sm'}`}>
           <Hero />
         </section>
       </main>
