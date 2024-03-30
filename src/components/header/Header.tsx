@@ -35,13 +35,21 @@ export const Header = ({ showMenu, setShowMenu }: HeaderProps) => {
   const needsOverlay = !scrolledToTop && scrollDirection === 'UP'
 
   const shadowClasses = 'drop-shadow-xl shadow-gray-200 dark:shadow-gray-900'
-
   const colorClasses = 'bg-white text-black dark:bg-black dark:text-white'
+
+  const handleNavHeaderClick = (itemHref: string) => {
+    setTimeout(() => {
+      setShowMenu(false)
+      window.location.href = itemHref
+    }, 200)
+  }
 
   return (
     <header
       className={`w-full select-none z-10 ${
-        needsOverlay ? `fixed top-0  ${colorClasses} ${shadowClasses}` : ''
+        needsOverlay
+          ? `fixed top-0  ${colorClasses} ${!showMenu && shadowClasses}`
+          : ''
       } `}
       ref={headerRef}
     >
@@ -60,7 +68,10 @@ export const Header = ({ showMenu, setShowMenu }: HeaderProps) => {
         </div>
 
         <div className="hidden md:block">
-          <HeaderNavBar orientation="horizontal" />
+          <HeaderNavBar
+            orientation="horizontal"
+            onItemClicked={handleNavHeaderClick}
+          />
         </div>
 
         <div className="block md:hidden" onClick={() => setShowMenu(!showMenu)}>
@@ -72,9 +83,12 @@ export const Header = ({ showMenu, setShowMenu }: HeaderProps) => {
         </div>
         {showMenu && (
           <div
-            className={`absolute left-0 top-20 z-20 w-screen h-fit animate-in slide-in-from-top ${colorClasses} ${shadowClasses}`}
+            className={`absolute left-0 top-20 z-20 rounded-b-xl w-screen h-fit animate-in slide-in-from-top ${colorClasses} ${shadowClasses}`}
           >
-            <HeaderNavBar orientation="vertical" />
+            <HeaderNavBar
+              orientation="vertical"
+              onItemClicked={handleNavHeaderClick}
+            />
           </div>
         )}
       </div>
