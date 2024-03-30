@@ -7,13 +7,17 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { IoMdClose } from 'react-icons/io'
 import { useScrollDirection } from '@/hooks/useScrollDirection'
 import { useEffect, useRef, useState } from 'react'
+import { HeaderNavBar } from './nav-bar/HeaderNavBar'
 
-export const Header = () => {
+export type HeaderProps = {
+  showMenu: boolean
+  setShowMenu: (menuOpen: boolean) => void
+}
+
+export const Header = ({ showMenu, setShowMenu }: HeaderProps) => {
   const headerRef = useRef<HTMLElement | null>(null)
   const scrollDirection = useScrollDirection('DOWN')
   const [scrolledToTop, setScrolledToTop] = useState(true)
-
-  const [showMenu, setShowMenu] = useState(false)
 
   const handleScroll = () => {
     if (!headerRef.current) return
@@ -30,12 +34,14 @@ export const Header = () => {
 
   const needsOverlay = !scrolledToTop && scrollDirection === 'UP'
 
+  const shadowClasses = 'drop-shadow-xl shadow-gray-200 dark:shadow-gray-900'
+
+  const colorClasses = 'bg-white text-black dark:bg-black dark:text-white'
+
   return (
     <header
-      className={`w-full select-none ${
-        needsOverlay
-          ? 'fixed top-0 z-10 bg-white text-black drop-shadow-xl shadow-gray-200 dark:shadow-main-600 dark:bg-main-900 dark:text-white'
-          : ''
+      className={`w-full select-none z-10 ${
+        needsOverlay ? `fixed top-0  ${colorClasses} ${shadowClasses}` : ''
       } `}
       ref={headerRef}
     >
@@ -52,6 +58,11 @@ export const Header = () => {
             alt="logo"
           />
         </div>
+
+        <div className="hidden md:block">
+          <HeaderNavBar orientation="horizontal" />
+        </div>
+
         <div className="block md:hidden" onClick={() => setShowMenu(!showMenu)}>
           {showMenu ? (
             <IoMdClose className="animate-in spin-in w-6 h-6" />
@@ -59,11 +70,11 @@ export const Header = () => {
             <GiHamburgerMenu className="animate-out spin-out w-6 h-6" />
           )}
         </div>
-
         {showMenu && (
-          <div className="absolute left-0 top-20 z-10 w-screen animate-in slide-in-from-top bg-white text-black dark:bg-main-900 dark:text-white">
-            <div className=""></div>
-            <p>Sono il menu!</p>
+          <div
+            className={`absolute left-0 top-20 z-20 w-screen h-fit animate-in slide-in-from-top ${colorClasses} ${shadowClasses}`}
+          >
+            <HeaderNavBar orientation="vertical" />
           </div>
         )}
       </div>
