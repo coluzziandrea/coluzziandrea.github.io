@@ -28,7 +28,23 @@ const config: Config = {
         950: '#143138',
       },
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        'fade-in-down': {
+          '0%': {
+            opacity: '0',
+            transform: 'translate3d(0, -100%, 0)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translate3d(0, 0, 0)',
+          },
+        },
+      },
+      animation: {
+        fadeslidein: 'fade-in-down 0.5s ease-in 1',
+      },
+    },
   },
   plugins: [],
 }
