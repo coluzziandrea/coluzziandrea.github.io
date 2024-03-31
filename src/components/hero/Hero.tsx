@@ -3,7 +3,7 @@ import hero from '../../../public/assets/hero.png'
 
 export const Hero = () => {
   return (
-    <section className="flex flex-col items-center justify-center mx-2 gap-4 select-none">
+    <section className="flex flex-col items-center justify-center p-4  gap-4 select-none">
       <div className="flex flex-col gap-4">
         <h1 className="w-fit text-5xl md:text-7xl italic font-semibold font-mono text-left tracking-wider inline-block text-transparent bg-clip-text bg-gradient-to-r from-main-600 to-secondary-600 dark:from-main-500 dark:to-secondary-500">
           &lt;Andrea

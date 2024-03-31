@@ -10,38 +10,52 @@ export const WorkExperiences = () => {
   const experiences = [
     {
       company: 'Klarna',
+      link: 'https://www.klarna.com/',
       role: 'Software Engineer',
       period: 'Feb 2023 - present',
-      description: 'lorem',
+      description:
+        'Designing & Developing FinTech solutions for Klarna App’s users. In particular, I’ve been working on the GIft Card features for the US customers, building both FrontEnd mobile app & BackEnd service',
       logo: klarna,
+      colors: 'from-[#FFA8CD] to-[#2C2242]',
     },
     {
-      company: 'Targa',
+      company: 'Targa Telematics',
+      link: 'https://www.targatelematics.com/',
       role: 'Software Engineer',
       period: 'Apr 2022 - Feb 2023',
-      description: 'lorem',
+      description:
+        "Designing & Developing Fleet Management solutions for Automotive Business customers. Applying IoT to the automotive sector. Building a microservices based architecture to manage connected vehicle's data and delivering our customers the best solution for their business needs.",
       logo: targa,
+      colors: 'from-[#7FBC09] to-[#001636]',
     },
     {
       company: 'Marini Impianti Industriali',
+      link: 'https://www.mariniimpianti.it/',
       role: 'Software Engineer',
       period: 'Feb 2018 - Apr 2022',
-      description: 'lorem',
+      description:
+        'Analysis, designing and implementation of software solutions for diagnostic and maintenance of Railway Systems, main customer: Rete Ferroviaria Italiana (RFI)',
       logo: marini,
+      colors: 'from-[#00477F] to-[#75C1E9]',
     },
     {
       company: 'La Sapienza, University of Rome',
+      link: 'https://www.uniroma1.it/',
       role: 'BS - Engineering in Computer Science',
       period: 'Oct 2013 - Oct 2017',
-      description: 'lorem',
+      description:
+        "I completed my Bachelor's in Engineering in Computer Science at La Sapienza, gaining a robust foundation in computer science principles and cutting-edge technologies while engaging in practical projects and collaborative teamwork.",
       logo: sapienza,
+      colors: 'from-[#802433] to-[#731120]',
     },
     {
       company: 'MiWare',
       role: 'Software Developer',
       period: 'Jul 2015 - Apr 2016',
-      description: 'lorem',
+      description:
+        'Design and development of software systems for industrial automation. During this experience I also worked as a consultant for Cesare Fiorucci S.p.A. located in Pomezia',
       logo: miware,
+      colors: 'from-[#847B0E] to-[#BBB6B3]',
     },
   ]
 
@@ -54,17 +68,29 @@ export const WorkExperiences = () => {
         Experiences
       </h2>
 
-      <div className="flex flex-col w-full px-4 gap-4">
+      <div className="flex flex-col w-full px-4 gap-4 md:grid md:grid-cols-3">
         {experiences.map((experience) => (
           <div
             key={experience.period}
-            className="flex flex-col relative h-96 border-[1px] border-black dark:border-white rounded-3xl shadow-lg overflow-hidden"
+            className="flex flex-col relative h-[450px] border-[1px] border-black dark:border-white rounded-3xl shadow-lg overflow-hidden"
           >
-            <div className="flex flex-col items-center justify-center drop-shadow-lg bg-main-500 h-[35%]">
-              <p>{experience.company}</p>
+            <div
+              className={`flex flex-col items-center justify-start pt-10 drop-shadow-lg cursor-pointer bg-gradient-to-r ${experience.colors} h-[30%]`}
+              onClick={() =>
+                experience.link && window.open(experience.link, '_blank')
+              }
+            >
+              <p className="font-bold text-xl text-slate-100">
+                {experience.company}
+              </p>
             </div>
 
-            <div className="absolute top-[25%] left-[35%] h-24 w-24 overflow-hidden rounded-full bg-white">
+            <div
+              className="absolute top-[20%] left-[35%] h-24 w-24 cursor-pointer overflow-hidden rounded-full bg-slate-100 shadow-lg dark:shadow-gray-900"
+              onClick={() =>
+                experience.link && window.open(experience.link, '_blank')
+              }
+            >
               <Image
                 src={experience.logo}
                 className="w-full h-full object-contain"
@@ -73,12 +99,18 @@ export const WorkExperiences = () => {
               />
             </div>
 
-            <div className="flex flex-col flex-grow items-center  justify-center">
-              <p>{experience.role}</p>
+            <div className="flex flex-col gap-2 px-4 pt-4 flex-grow items-center  justify-center">
+              <p className="font-semibold text-lg text-center">
+                {experience.role}
+              </p>
 
-              <p>{experience.period}</p>
+              <p className="font-light font-mono text-sm">
+                {experience.period}
+              </p>
 
-              <p>{experience.description}</p>
+              <p className="text-justify text-sm font-light tracking-wide">
+                {experience.description}
+              </p>
             </div>
           </div>
         ))}
