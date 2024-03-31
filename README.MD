@@ -1,4 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# coluzziandrea.com
+
+<p align="center">
+  <h1 align="center">Full Stack Software Engineer</h1>
+
+  <p align="center">
+    Coluzzi Andrea's personal website, built with NextJS and GitHub Pages. Site URL: 
+    <a href="https://www.coluzziandrea.com/">coluzziandrea.com</a>
+    <br />
+    <br />
+    <a href="https://github.com/coluzziandrea">About Me</a>
+  </p>
+</p>
+
+## Tech Stack
+
+- React
+- Styled Components
+- HTML5 & CSS3
+
+## Color Codes
+
+| Color           | Hex                                                        |
+| --------------- | ---------------------------------------------------------- |
+| Primary color   | ![#31afb7](https://img.shields.io/badge/-%2331afb7-31afb7) |
+| Secondary color | ![#084887](https://img.shields.io/badge/-%23084887-084887) |
 
 ## Getting Started
 

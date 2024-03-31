@@ -2,7 +2,7 @@ name: CI/CD
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
@@ -27,11 +27,11 @@ jobs:
         run: |
           npm ci
           npm run build
-          touch build/.nojekyll
+          touch out/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
           branch: gh-pages
-          folder: build
+          folder: out
