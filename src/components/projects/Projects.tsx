@@ -1,6 +1,7 @@
 import kezurya from '../../../public/assets/projects/kezurya.png'
 import dietisy from '../../../public/assets/projects/dietisy.png'
 import { Project } from './Project'
+import { FaArrowRight } from 'react-icons/fa'
 
 const projects: Project[] = [
   {
@@ -41,6 +42,16 @@ export const Projects = () => {
         {projects.map((project) => (
           <Project key={project.title} {...project} />
         ))}
+      </div>
+
+      <div>
+        <a
+          href="https://github.com/coluzziandrea?tab=repositories"
+          className="flex flex-row items-baseline gap-2 text-main-500 hover:text-main-600"
+        >
+          <p>More projects</p>
+          <FaArrowRight />
+        </a>
       </div>
     </section>
   )

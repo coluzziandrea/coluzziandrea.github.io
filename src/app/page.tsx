@@ -5,6 +5,7 @@ import { Header } from '@/components/header/Header'
 import { Hero } from '@/components/hero/Hero'
 import { Skills } from '@/components/skills/Skills'
 import { Projects } from '@/components/projects/Projects'
+import { Footer } from '@/components/footer/Footer'
 import { WorkExperiences } from '@/components/work/WorkExperiences'
 import { useState } from 'react'
 
@@ -23,6 +24,7 @@ export default function Home() {
           <WorkExperiences />
           <Projects />
           <Contacts />
+          <Footer />
         </main>
       </div>
     </div>
