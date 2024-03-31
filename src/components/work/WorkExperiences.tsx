@@ -64,7 +64,7 @@ export const WorkExperiences = () => {
       className="flex flex-col w-full items-center gap-6 select-none"
       id="experiences"
     >
-      <h2 className="text-3xl md:text-6xl font-semibold text-center tracking-widest inline-block text-transparent bg-clip-text bg-gradient-to-r from-main-600 to-secondary-600 dark:from-main-500 dark:to-secondary-500">
+      <h2 className="text-3xl md:text-6xl py-2 font-semibold text-center tracking-widest inline-block text-transparent bg-clip-text bg-gradient-to-r from-main-600 to-secondary-600 dark:from-main-500 dark:to-secondary-500">
         Experiences
       </h2>
 
@@ -86,7 +86,7 @@ export const WorkExperiences = () => {
             </div>
 
             <div
-              className="absolute animate-bounce paused hover:running top-[25%] left-[35%] h-24 w-24 cursor-pointer overflow-hidden rounded-full bg-slate-100 shadow-lg dark:shadow-gray-900"
+              className="absolute animate-bounce paused hover:running top-[25%] left-[38%] h-24 w-24 cursor-pointer overflow-hidden rounded-full bg-slate-100 shadow-lg dark:shadow-gray-900"
               onClick={() =>
                 experience.link && window.open(experience.link, '_blank')
               }
