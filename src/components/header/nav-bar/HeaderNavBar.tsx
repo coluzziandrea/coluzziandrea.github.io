@@ -1,4 +1,4 @@
-import { FaPuzzlePiece, FaDiagramProject, FaBlog } from 'react-icons/fa6'
+import { FaDiagramProject, FaBlog } from 'react-icons/fa6'
 import { MdOutlineWork } from 'react-icons/md'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { IoDocumentText } from 'react-icons/io5'
@@ -14,7 +14,6 @@ export const HeaderNavBar = ({
   onItemClicked,
 }: HeaderNavBarProps) => {
   const navItems = [
-    { href: '/#skills', text: 'Skills', icon: <FaPuzzlePiece /> },
     {
       href: '/#experiences',
       text: 'Work Experiences',
