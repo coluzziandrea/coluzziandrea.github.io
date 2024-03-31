@@ -26,7 +26,7 @@ export const HeaderNavBar = ({
       icon: <FaBlog />,
     },
     { href: '/assets/resume.pdf', text: 'Resume', icon: <IoDocumentText /> },
-    { href: '/#contact', text: 'Contact Me', icon: <FaTelegramPlane /> },
+    { href: '/#contacts', text: 'Contact Me', icon: <FaTelegramPlane /> },
   ]
 
   return (

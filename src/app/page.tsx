@@ -1,5 +1,6 @@
 'use client'
 
+import { Contacts } from '@/components/contacts/Contacts'
 import { Header } from '@/components/header/Header'
 import { Hero } from '@/components/hero/Hero'
 import { Skills } from '@/components/skills/Skills'
@@ -19,6 +20,7 @@ export default function Home() {
           <Hero />
           <Skills />
           <WorkExperiences />
+          <Contacts />
         </section>
       </main>
     </div>
