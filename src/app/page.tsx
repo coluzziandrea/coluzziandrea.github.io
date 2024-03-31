@@ -2,6 +2,7 @@
 
 import { Header } from '@/components/header/Header'
 import { Hero } from '@/components/hero/Hero'
+import { Skills } from '@/components/skills/Skills'
 import { WorkExperiences } from '@/components/work/WorkExperiences'
 import { useState } from 'react'
 
@@ -16,6 +17,7 @@ export default function Home() {
           className={`flex flex-col gap-6 mt-2 pb-4 ${showMenu && 'blur-sm'}`}
         >
           <Hero />
+          <Skills />
           <WorkExperiences />
         </section>
       </main>

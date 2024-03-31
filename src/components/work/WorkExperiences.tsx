@@ -61,7 +61,7 @@ export const WorkExperiences = () => {
 
   return (
     <section
-      className="flex flex-col w-full items-center gap-6"
+      className="flex flex-col w-full items-center gap-6 select-none"
       id="experiences"
     >
       <h2 className="text-3xl md:text-6xl font-semibold text-center tracking-widest inline-block text-transparent bg-clip-text bg-gradient-to-r from-main-600 to-secondary-600 dark:from-main-500 dark:to-secondary-500">
@@ -75,7 +75,7 @@ export const WorkExperiences = () => {
             className="flex flex-col relative h-[450px] border-[1px] border-black dark:border-white rounded-3xl shadow-lg overflow-hidden"
           >
             <div
-              className={`flex flex-col items-center justify-start pt-10 drop-shadow-lg cursor-pointer bg-gradient-to-r ${experience.colors} h-[30%]`}
+              className={`flex flex-col items-center justify-start pt-10 drop-shadow-lg cursor-pointer bg-gradient-to-r ${experience.colors} h-[35%]`}
               onClick={() =>
                 experience.link && window.open(experience.link, '_blank')
               }
@@ -86,7 +86,7 @@ export const WorkExperiences = () => {
             </div>
 
             <div
-              className="absolute top-[20%] left-[35%] h-24 w-24 cursor-pointer overflow-hidden rounded-full bg-slate-100 shadow-lg dark:shadow-gray-900"
+              className="absolute animate-bounce paused hover:running top-[25%] left-[35%] h-24 w-24 cursor-pointer overflow-hidden rounded-full bg-slate-100 shadow-lg dark:shadow-gray-900"
               onClick={() =>
                 experience.link && window.open(experience.link, '_blank')
               }
