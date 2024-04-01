@@ -17,7 +17,7 @@ export const Hero = () => {
       </div>
 
       <div className="flex flex-col gap-4">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center gap-2">
           <Image
             src={hero}
             className="h-64 w-64 animate-pulse running hover:paused md:w-80 md:h-80"
