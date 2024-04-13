@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import ReactGA from 'react-ga4'
 import './globals.css'
+import { useEffect } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,6 +16,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  ReactGA.initialize('G-TTXVV60N2Z')
+
   return (
     <html lang="en">
       <body

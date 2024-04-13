@@ -38,7 +38,7 @@ export const Projects = () => {
         Projects
       </h2>
 
-      <div className="flex flex-col gap-4">
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
         {projects.map((project) => (
           <Project key={project.title} {...project} />
         ))}

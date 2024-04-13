@@ -54,6 +54,16 @@ export const Hero = () => {
                 @ Twitch
               </a>
             </p>
+
+            <p>
+              Host{' '}
+              <a
+                className="text-main-600 hover:text-main-400 dark:text-main-400 dark:hover:text-main-200"
+                href="https://www.thebytessmith.dev/"
+              >
+                @ The Bytes Smith
+              </a>
+            </p>
           </div>
         </div>
 
@@ -72,6 +82,16 @@ export const Hero = () => {
             🔥 In Jan 2023 I founded Latina In Tech, a local tech community
             based in Latina, Italy. We organize monthly tech events on various
             topics 🎙️
+          </p>
+
+          <p>
+            🟣 From Jan 2024 I started streaming my coding sessions on Twitch,
+            follow me on my channel! 🟣
+          </p>
+
+          <p>
+            📻📻📻 Hosting <strong>The Bytes Smith</strong> podcast, a channel
+            for weekly digested tech news for the digital artisan.
           </p>
 
           <p>

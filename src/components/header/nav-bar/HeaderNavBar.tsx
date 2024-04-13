@@ -19,12 +19,13 @@ export const HeaderNavBar = ({
       text: 'Work Experiences',
       icon: <MdOutlineWork />,
     },
-    { href: '/#projects', text: 'Projects', icon: <FaDiagramProject /> },
     {
-      href: 'https://blog.coluzziandrea.com/',
+      href: '/#blog',
       text: 'Blog',
       icon: <FaBlog />,
     },
+    { href: '/#projects', text: 'Projects', icon: <FaDiagramProject /> },
+
     { href: '/assets/resume.pdf', text: 'Resume', icon: <IoDocumentText /> },
     { href: '/#contacts', text: 'Contact Me', icon: <FaTelegramPlane /> },
   ]
