@@ -8,12 +8,14 @@ export const POST_FIELDS = [
   'cover',
   'tags',
   'year',
+  'description',
 ]
 
 export const postSchema = z.object({
   slug: z.string(),
   date: z.string(),
   cover: z.string(),
+  description: z.string(),
   title: z.string(),
   subtitle: z.string(),
   tags: z.array(z.string()),

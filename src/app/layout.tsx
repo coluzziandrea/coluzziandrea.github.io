@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import ReactGA from 'react-ga4'
 import './globals.css'
-import { useEffect, useState } from 'react'
 import { Header } from '@/components/header/Header'
+import { Contacts } from '@/components/contacts/Contacts'
+import { Footer } from '@/components/footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,6 +29,9 @@ export default function RootLayout({
           <Header />
 
           {children}
+
+          <Contacts />
+          <Footer />
         </main>
       </body>
     </html>

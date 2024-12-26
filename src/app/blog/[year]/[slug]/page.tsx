@@ -57,6 +57,9 @@ export default async function Page({
         'h1',
         'h2',
         'img',
+        'code',
+        'pre',
+        'blockquote',
       ]}
     >
       {post?.content}
