@@ -5,6 +5,7 @@ import {
   FaYoutube,
   FaThreads,
   FaTwitch,
+  FaBluesky,
 } from 'react-icons/fa6'
 
 export const Contacts = () => {
@@ -25,9 +26,9 @@ export const Contacts = () => {
       icon: <FaYoutube />,
     },
     {
-      alt: 'Twitter',
-      href: 'https://twitter.com/andreacoluzzi94',
-      icon: <FaXTwitter />,
+      alt: 'Bluesky',
+      href: 'https://bsky.app/profile/coluzziandrea.bsky.social',
+      icon: <FaBluesky />,
     },
     {
       alt: 'Linkedin',
@@ -38,11 +39,6 @@ export const Contacts = () => {
       alt: 'DevTo',
       href: 'https://dev.to/coluzziandrea',
       icon: <FaDev />,
-    },
-    {
-      alt: 'Threads',
-      href: 'https://www.threads.net/@andreacoluzzi94',
-      icon: <FaThreads />,
     },
   ]
 

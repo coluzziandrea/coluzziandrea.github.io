@@ -5,56 +5,28 @@ import logoWhite from '../../../public/assets/logo_white.png'
 import logoBlack from '../../../public/assets/logo_black.png'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { IoMdClose } from 'react-icons/io'
-import { useScrollDirection } from '@/hooks/useScrollDirection'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { HeaderNavBar } from './nav-bar/HeaderNavBar'
 
-export type HeaderProps = {
-  showMenu: boolean
-  setShowMenu: (menuOpen: boolean) => void
-}
-
-export const Header = ({ showMenu, setShowMenu }: HeaderProps) => {
-  const headerRef = useRef<HTMLElement | null>(null)
-  const scrollDirection = useScrollDirection('DOWN')
-  const [scrolledToTop, setScrolledToTop] = useState(true)
-
-  const handleScroll = () => {
-    if (!headerRef.current) return
-    setScrolledToTop(window.scrollY < headerRef.current.clientHeight)
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
-
-  const needsOverlay = !scrolledToTop && scrollDirection === 'UP'
-
+export const Header = () => {
   const shadowClasses = 'drop-shadow-xl shadow-gray-200 dark:shadow-gray-900'
   const colorClasses = 'bg-white text-black dark:bg-black dark:text-white'
 
+  const [showMenu, setShowMenu] = useState(false)
+
   const handleNavHeaderClick = (itemHref: string) => {
     setTimeout(() => {
-      setShowMenu(false)
       window.location.href = itemHref
     }, 200)
   }
 
   return (
-    <header
-      className={`w-full select-none z-10 ${
-        needsOverlay
-          ? `fixed top-0  ${colorClasses} ${!showMenu && shadowClasses}`
-          : ''
-      } `}
-      ref={headerRef}
-    >
+    <header className={`w-full select-none z-10  `}>
       <div className="relative flex w-full h-20 px-4 py-2 justify-between items-center">
-        <div className="h-full w-28 py-1">
+        <div
+          className="h-full w-28 py-1 cursor-pointer"
+          onClick={() => handleNavHeaderClick('/')}
+        >
           <Image
             src={logoWhite}
             className="h-full w-full hidden dark:block "
@@ -83,7 +55,7 @@ export const Header = ({ showMenu, setShowMenu }: HeaderProps) => {
         </div>
         {showMenu && (
           <div
-            className={`absolute left-0 top-20 z-20 rounded-b-xl w-screen h-fit animate-in slide-in-from-top ${colorClasses} ${shadowClasses}`}
+            className={`absolute left-0 top-20 z-20 rounded-b-xl w-screen h-fit animate-in slide-in-from-top-60 duration-700 ${colorClasses} ${shadowClasses}`}
           >
             <HeaderNavBar
               orientation="vertical"

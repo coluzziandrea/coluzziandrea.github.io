@@ -1,7 +1,6 @@
 import { FaDiagramProject, FaBlog } from 'react-icons/fa6'
 import { MdOutlineWork } from 'react-icons/md'
 import { FaTelegramPlane } from 'react-icons/fa'
-import { IoDocumentText } from 'react-icons/io5'
 
 export type HeaderNavBarProps = {
   orientation: 'horizontal' | 'vertical'
@@ -26,7 +25,6 @@ export const HeaderNavBar = ({
     },
     { href: '/#projects', text: 'Projects', icon: <FaDiagramProject /> },
 
-    { href: '/assets/resume.pdf', text: 'Resume', icon: <IoDocumentText /> },
     { href: '/#contacts', text: 'Contact Me', icon: <FaTelegramPlane /> },
   ]
 

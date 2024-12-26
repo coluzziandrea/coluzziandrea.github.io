@@ -5,14 +5,26 @@ import targa from '../../../public/assets/targa.png'
 import miware from '../../../public/assets/miware_1.png'
 import sapienza from '../../../public/assets/sapienza.png'
 import marini from '../../../public/assets/marini_1.png'
+import nearform from '../../../public/assets/nearform.jpg'
+import Link from 'next/link'
 
 export const WorkExperiences = () => {
   const experiences = [
     {
+      company: 'Nearform',
+      link: 'https://www.nearform.com/',
+      role: 'Senior Software Developer',
+      period: 'Aug 2024 - present',
+      description:
+        'Designing & developing software solutions for multiple clients, focusing on the development of applications. Working with cutting-edge technologies and methodologies, such as Node.js, React, and Next.js, to deliver high-quality software solutions.',
+      logo: nearform,
+      colors: 'from-[#2826af] to-[#1bb64f]',
+    },
+    {
       company: 'Klarna',
       link: 'https://www.klarna.com/',
       role: 'Software Engineer',
-      period: 'Feb 2023 - present',
+      period: 'Feb 2023 - Jul 2024',
       description:
         'Designing & Developing FinTech solutions for Klarna App’s users. In particular, I’ve been working on the GIft Card features for the US customers, building both FrontEnd mobile app & BackEnd service',
       logo: klarna,
@@ -74,22 +86,18 @@ export const WorkExperiences = () => {
             key={experience.period}
             className="flex flex-col relative h-[450px] border-[1px] border-black dark:border-white rounded-3xl shadow-lg overflow-hidden"
           >
-            <div
+            <Link
+              href={experience.link ?? ''}
               className={`flex flex-col items-center justify-start pt-10 drop-shadow-lg cursor-pointer bg-gradient-to-r ${experience.colors} h-[35%]`}
-              onClick={() =>
-                experience.link && window.open(experience.link, '_blank')
-              }
             >
               <p className="font-bold text-xl text-slate-100">
                 {experience.company}
               </p>
-            </div>
+            </Link>
 
-            <div
+            <Link
+              href={experience.link ?? ''}
               className="absolute animate-bounce paused hover:running top-[25%] left-[38%] h-24 w-24 cursor-pointer overflow-hidden rounded-full bg-slate-100 shadow-lg dark:shadow-gray-900"
-              onClick={() =>
-                experience.link && window.open(experience.link, '_blank')
-              }
             >
               <Image
                 src={experience.logo}
@@ -97,7 +105,7 @@ export const WorkExperiences = () => {
                 alt="logo"
                 draggable={false}
               />
-            </div>
+            </Link>
 
             <div className="flex flex-col gap-2 px-4 pt-4 flex-grow items-center  justify-center">
               <p className="font-semibold text-lg text-center">
